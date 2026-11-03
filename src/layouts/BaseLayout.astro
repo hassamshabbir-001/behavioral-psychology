@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   title, description,
-  ogImage = '/images/hero-behavioral-psychology.webp',
+  ogImage = '/images/og-cover.jpg',
   ogType = 'website', articleDate, jsonLd,
 } = Astro.props;
 const site = 'https://behavioralpsychology.pro';
@@ -57,13 +57,19 @@ const current = Astro.url.pathname;
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#7C5CFC" />
   <meta property="og:type" content={ogType} />
   <meta property="og:site_name" content="Behavioral Psychology" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={ogAbsolute} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Behavioral Psychology" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
@@ -114,6 +120,12 @@ const current = Astro.url.pathname;
       text-decoration: none; flex: none;
     }
     .brand svg { width: 34px; height: 34px; flex: none; }
+    .brand img.logo-img { height: 46px; width: auto; }
+    .logo-badge {
+      display: inline-block; background: #fff; border-radius: 16px;
+      padding: 10px 18px; line-height: 0;
+    }
+    .logo-badge img { height: 42px; width: auto; }
     .brand-name { font-size: 19px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; line-height: 1.1; }
     .brand-name span { color: var(--purple-deep); }
     .main-nav { margin-left: auto; }
@@ -498,8 +510,7 @@ const current = Astro.url.pathname;
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
       <a class="brand" href="/" aria-label="Behavioral Psychology home">
-        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#7C5CFC"/><path d="M32 12l17.3 10v20L32 52l-17.3-10V22z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><circle cx="32" cy="32" r="5" fill="#fff"/></svg>
-        <span class="brand-name">Behavioral <span>Psychology</span></span>
+        <img class="logo-img" src="/images/logo.webp" alt="Behavioral Psychology" width="960" height="323" fetchpriority="high" />
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
@@ -541,9 +552,8 @@ const current = Astro.url.pathname;
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/" aria-label="Behavioral Psychology home">
-            <svg viewBox="0 0 64 64" aria-hidden="true" width="34" height="34"><rect width="64" height="64" rx="14" fill="#7C5CFC"/><path d="M32 12l17.3 10v20L32 52l-17.3-10V22z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><circle cx="32" cy="32" r="5" fill="#fff"/></svg>
-            <span class="brand-name">Behavioral <span>Psychology</span></span>
+          <a class="logo-badge" href="/" aria-label="Behavioral Psychology home">
+            <img src="/images/logo.webp" alt="Behavioral Psychology" width="960" height="323" loading="lazy" />
           </a>
           <p>An independent educational publication explaining behavioral psychology: core ideas, degree programs, careers, and real-world applications.</p>
         </div>

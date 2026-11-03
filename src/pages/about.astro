@@ -1,10 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About Behavioral Psychology";
+const description = "Learn about Behavioral Psychology, an independent educational publication explaining behavioral science in plain language.";
+const site = 'https://behavioralpsychology.pro';
+const pageUrl = site + '/about/';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": title,
+  "description": description,
+  "url": pageUrl,
+  "author": { "@type": "Person", "name": "Hassam Shabbir", "url": site + "/author/hassam-shabbir/" },
+  "publisher": { "@type": "Organization", "name": "Behavioral Psychology", "url": site + "/" },
+  "isPartOf": { "@id": site + "/#website" }
+};
 ---
 
 <BaseLayout
-  title="About Behavioral Psychology"
-  description="Learn about Behavioral Psychology, an independent educational publication explaining behavioral science in plain language."
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
 >
   <section class="page-hero">
     <div class="wrap">

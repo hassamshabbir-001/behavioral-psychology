@@ -32,6 +32,9 @@ const jsonLd = {
 };
 ---
 <BaseLayout title={title} description={description} ogImage={ogImage} jsonLd={jsonLd}>
+  <style>
+    .card-body h2 { margin: 0; font-size: 19px; color: var(--navy); font-weight: 800; line-height: 1.35; }
+  </style>
   <section class="page-hero">
     <div class="wrap">
       <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">&rsaquo;</span> Articles</p>
@@ -47,7 +50,7 @@ const jsonLd = {
             <img src={a.image} alt={a.imageAlt} width="1168" height="784" loading="lazy" />
             <div class="card-body">
               <span class="card-kicker">{a.kicker}</span>
-              <h3>{a.title}</h3>
+              <h2>{a.title}</h2>
               <p>{a.description}</p>
               <span class="card-link">Read the article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
             </div>
