@@ -2,13 +2,13 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
 const toc = [
-  { id: "quick-answer", label: "The Quick Answer" },
-  { id: "behavioral-science", label: "What Behavioral Science Covers" },
-  { id: "psychology", label: "What Psychology Covers" },
-  { id: "comparison", label: "Head-to-Head Comparison" },
-  { id: "degree-paths", label: "Degree Paths for Each" },
-  { id: "careers", label: "Careers for Each" },
-  { id: "which-to-study", label: "Which Should You Study?" },
+  { id: "quick-answer", label: "What is the difference between behavioral science and psychology?" },
+  { id: "behavioral-science", label: "What does behavioral science cover?" },
+  { id: "psychology", label: "What does psychology cover as a discipline?" },
+  { id: "comparison", label: "How do behavioral science and psychology compare?" },
+  { id: "degree-paths", label: "Which degree paths fit each field?" },
+  { id: "careers", label: "What careers fit each field?" },
+  { id: "which-to-study", label: "Which should you study: behavioral science or psychology?" },
 ];
 
 const takeaways = [
@@ -61,7 +61,7 @@ const related = [
   heroImage="/images/hero-behavioral-science-vs-psychology.webp"
   heroAlt="Two diverging paths representing a conceptual comparison"
   deck="Behavioral science and psychology sound like the same thing, and they overlap heavily. But one is a single discipline and the other is an interdisciplinary field, and the difference matters for degrees, careers, and licensure. Here is the full comparison."
-  figcaption="Two paths, one landscape: behavioral science and psychology cover overlapping territory but start from different places."
+  figcaption="Two paths through shared territory: behavioral science and psychology cover overlapping ground but start from different places."
   toc={toc}
   takeaways={takeaways}
   faqs={faqs}
@@ -69,7 +69,7 @@ const related = [
   crumbs={[{ label: "Articles", href: "/blog/" }, { label: "Behavioral Science vs Psychology" }]}
   related={related}
 >
-  <h2 id="quick-answer">The Quick Answer</h2>
+  <h2 id="quick-answer">What is the difference between behavioral science and psychology?</h2>
   <p>
     Psychology is a single academic discipline devoted to the scientific study of mind and behavior.
     Behavioral science is an interdisciplinary field that studies human behavior and decision-making
@@ -85,13 +85,12 @@ const related = [
     your education and career.
   </p>
 
-  <h2 id="behavioral-science">What Behavioral Science Covers</h2>
+  <h2 id="behavioral-science">What does behavioral science cover?</h2>
   <p>
-    Behavioral science studies how people make decisions and behave, drawing on multiple
-    disciplines at once. A behavioral scientist studying retirement savings might combine
-    psychological research on present bias, economic models of incentives, sociological data on
-    norms, and neuroscientific findings on reward processing. No single discipline owns the
-    question; the field borrows whatever tools explain the behavior.
+    Behavioral science studies how people make decisions and behave, drawing on several disciplines
+    at once. A behavioral scientist studying retirement savings might combine psychological research
+    on present bias, economic models of incentives, and sociological data on norms. No single
+    discipline owns the question; the field borrows whatever tools explain the behavior.
   </p>
   <p>
     Its signature contributions are applied. Nudge theory, popularized by Richard Thaler and Cass
@@ -107,8 +106,19 @@ const related = [
     neuroscience. The unifying thread is not a method but a problem: explaining and influencing
     human behavior in real-world settings.
   </p>
+  <p>
+    The applied side has an origin story with a date. In 2010 the UK government created the
+    Behavioural Insights Team, often called the "nudge unit," to apply behavioral findings to public
+    policy, from tax letters to organ donation defaults. Similar units now exist in governments and
+    companies worldwide.
+  </p>
+  <p>
+    One framework behavioral scientists borrow constantly is dual-process theory: Daniel Kahneman's
+    distinction between fast, automatic System 1 thinking and slow, deliberate System 2 thinking,
+    popularized in his 2011 book Thinking, Fast and Slow. Nudges work by designing for System 1.
+  </p>
 
-  <h2 id="psychology">What Psychology Covers as a Discipline</h2>
+  <h2 id="psychology">What does psychology cover as a discipline?</h2>
   <p>
     Psychology is the scientific study of mind and behavior as a standalone discipline with its own
     departments, journals, licensing systems, and professional organizations like the American
@@ -130,7 +140,13 @@ const related = [
     anyone who wants to practice clinically.
   </p>
 
-  <h2 id="comparison">Head-to-Head Comparison</h2>
+  <h2 id="comparison">How do behavioral science and psychology compare?</h2>
+  <p>
+    The core difference is structure: psychology is one discipline with its own departments,
+    journals, and licensing system, while behavioral science is an interdisciplinary field that
+    borrows methods from psychology, economics, sociology, and neuroscience. They overlap heavily
+    in research, but only psychology offers a clinical licensure path.
+  </p>
   <div class="table-wrap">
     <table class="data-table">
       <thead>
@@ -147,7 +163,13 @@ const related = [
     </table>
   </div>
 
-  <h2 id="degree-paths">Degree Paths for Each</h2>
+  <h2 id="degree-paths">Which degree paths fit each field?</h2>
+  <p>
+    Dedicated behavioral science degrees exist at the bachelor's and master's levels, but many
+    practitioners build the profile through a psychology, economics, or public policy degree with
+    behavioral coursework. Psychology's path is more standardized: bachelor's, then master's for
+    applied roles, then a PhD or PsyD for clinical practice.
+  </p>
   <p>
     <strong>Behavioral science degrees.</strong> Dedicated bachelor's and master's programs in
     behavioral science, behavioral economics, or decision science exist but are less common than
@@ -170,7 +192,13 @@ const related = [
     end: only the psychology path leads to clinical licensure.
   </p>
 
-  <h2 id="careers">Careers for Each</h2>
+  <h2 id="careers">What careers fit each field?</h2>
+  <p>
+    Behavioral science careers cluster around applied decision research: UX research, policy
+    analysis, and behavioral insights units in government. Psychology careers include those roles
+    plus licensed clinical positions like therapist and clinical psychologist. Salaries vary more by
+    role, setting, and seniority than by which field name is on the degree.
+  </p>
   <p>
     <strong>Behavioral science careers</strong> cluster around applied decision research: UX
     research in tech, behavioral insights units in government, policy analysis, market research,
@@ -191,7 +219,7 @@ const related = [
     entry-level research positions start modestly in both.
   </p>
 
-  <h2 id="which-to-study">Which Should You Study?</h2>
+  <h2 id="which-to-study">Which should you study: behavioral science or psychology?</h2>
   <p>
     This is educational guidance, not personalized advice, but the decision framework is
     straightforward. Choose psychology if you want the option of clinical licensure, if you want

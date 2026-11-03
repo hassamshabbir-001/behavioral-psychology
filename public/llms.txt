@@ -25,13 +25,13 @@
 
 ## Articles
 
-- [MS in Behavioral Psychology: Degrees, Careers, Salary](https://behavioralpsychology.pro/degrees/ms-behavioral-psychology/) (2026-11-03): admission, curriculum, and outlook for the MS path.
-- [Online Behavioral Psychology Degree Programs](https://behavioralpsychology.pro/degrees/online-behavioral-psychology-degree/) (2026-11-02): accreditation, formats, and costs.
-- [Master's in Behavioral Psychology: Programs Guide](https://behavioralpsychology.pro/degrees/masters-in-behavioral-psychology/) (2026-11-01): program types, admission, and careers.
-- [PhD in Behavioral Psychology: Programs and Careers](https://behavioralpsychology.pro/degrees/phd-in-behavioral-psychology/) (2026-10-31): structure, funding, and research areas.
-- [The Behavioral Perspective in Psychology Explained](https://behavioralpsychology.pro/behavioral-perspective-psychology/) (2026-10-29): core ideas and key researchers.
-- [Behavioral Psychology Examples in Everyday Life](https://behavioralpsychology.pro/behavioral-psychology-examples/) (2026-10-28): habits, workplace, advertising, and more.
-- [Behavioral Science vs Psychology: What's Different?](https://behavioralpsychology.pro/behavioral-science-vs-psychology/) (2026-10-27): focus, methods, degrees, and careers compared.
+- [MS in Behavioral Psychology: Degrees, Careers, Salary](https://behavioralpsychology.pro/degrees/ms-behavioral-psychology/) (2026-11-02): admission, curriculum, and outlook for the MS path.
+- [Online Behavioral Psychology Degree Programs](https://behavioralpsychology.pro/degrees/online-behavioral-psychology-degree/) (2026-11-01): accreditation, formats, and costs.
+- [Master's in Behavioral Psychology: Programs Guide](https://behavioralpsychology.pro/degrees/masters-in-behavioral-psychology/) (2026-10-31): program types, admission, and careers.
+- [PhD in Behavioral Psychology: Programs and Careers](https://behavioralpsychology.pro/degrees/phd-in-behavioral-psychology/) (2026-10-30): structure, funding, and research areas.
+- [The Behavioral Perspective in Psychology Explained](https://behavioralpsychology.pro/behavioral-perspective-psychology/) (2026-10-28): core ideas and key researchers.
+- [Behavioral Psychology Examples in Everyday Life](https://behavioralpsychology.pro/behavioral-psychology-examples/) (2026-10-27): habits, workplace, advertising, and more.
+- [Behavioral Science vs Psychology: What's Different?](https://behavioralpsychology.pro/behavioral-science-vs-psychology/) (2026-10-25): focus, methods, degrees, and careers compared.
 - [All articles](https://behavioralpsychology.pro/blog/)
 
 ## About and policies
@@ -42,3 +42,5 @@
 - [Editorial standards](https://behavioralpsychology.pro/editorial-standards/)
 - [Disclaimer](https://behavioralpsychology.pro/disclaimer/)
 - [Privacy policy](https://behavioralpsychology.pro/privacy-policy/)
+- [Terms of use](https://behavioralpsychology.pro/terms/)
+- [Cookie policy](https://behavioralpsychology.pro/cookies/)

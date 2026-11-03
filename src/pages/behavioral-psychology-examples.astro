@@ -2,13 +2,13 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
 const toc = [
-  { id: "habits", label: "Habits and Routines" },
-  { id: "workplace", label: "Workplace Incentives" },
-  { id: "parenting-classroom", label: "Parenting and Classrooms" },
-  { id: "advertising", label: "Advertising and Marketing" },
-  { id: "sports", label: "Sports Training Routines" },
-  { id: "pets", label: "Pet Training" },
-  { id: "health", label: "Health Behaviors" },
+  { id: "habits", label: "How do habits and routines form?" },
+  { id: "workplace", label: "How do workplaces use behavioral psychology?" },
+  { id: "parenting-classroom", label: "How does reinforcement work in parenting and classrooms?" },
+  { id: "advertising", label: "How does advertising use behavioral psychology?" },
+  { id: "sports", label: "How is behavioral psychology used in sports training?" },
+  { id: "pets", label: "How does pet training demonstrate operant conditioning?" },
+  { id: "health", label: "How do behavioral principles apply to health habits?" },
 ];
 
 const takeaways = [
@@ -63,13 +63,12 @@ const related = [
   crumbs={[{ label: "Articles", href: "/blog/" }, { label: "Everyday Examples" }]}
   related={related}
 >
-  <h2 id="habits">Habits and Routines</h2>
+  <h2 id="habits">How do habits and routines form?</h2>
   <p>
-    Most habits are operant conditioning running on autopilot. A morning coffee routine persists
-    because the behavior is followed, quickly and reliably, by alertness and comfort: positive
-    reinforcement on a continuous schedule. A snoozed alarm persists for a different reason: hitting
-    snooze removes the unpleasant sound, which is negative reinforcement. Both mechanisms make the
-    behavior more likely tomorrow.
+    Most habits are operant conditioning on autopilot. A morning coffee routine persists because the
+    behavior is followed quickly and reliably by alertness and comfort, which is positive
+    reinforcement. Hitting snooze persists because it removes an unpleasant sound, which is negative
+    reinforcement. In both cases, the consequence makes the behavior more likely tomorrow.
   </p>
   <p>
     Shaping explains how complex routines get built. Nobody learns a full workout routine in one
@@ -78,23 +77,29 @@ const related = [
     same thing deliberately: reinforcing successive approximations of the target habit.
   </p>
 
-  <h2 id="workplace">Workplace Incentives</h2>
+  <h2 id="workplace">How do workplaces use behavioral psychology?</h2>
   <p>
-    Offices are Skinner boxes with better furniture. Sales commissions are positive reinforcement
-    tied directly to the target behavior. Employee-of-the-month programs add social reinforcement.
-    Attendance bonuses use negative reinforcement in reverse: show up consistently and you avoid
-    losing the bonus. Annual performance reviews bundle many behaviors into one delayed consequence,
-    which behavioral research predicts will be weaker than immediate feedback, a finding many
-    companies have rediscovered the hard way.
+    Offices run on operant conditioning. Sales commissions reward the exact behavior a company wants,
+    which is positive reinforcement. Attendance bonuses work by removing a loss, which is negative
+    reinforcement. And because annual reviews deliver one delayed consequence for a year's work,
+    behavioral research predicts they shape behavior weakly compared with immediate feedback.
   </p>
   <p>
-    Variable schedules appear too. Surprise spot bonuses and unpredictable recognition create the
-    same persistent responding that variable-ratio schedules produce in the laboratory. When managers
-    wonder why steady praise loses its punch while occasional praise keeps working, reinforcement
-    schedules are the answer.
+    Skinner's four reinforcement schedules show up here by name. Fixed-ratio rewards come after a set
+    number of responses, like a bonus for every tenth sale. Variable-ratio rewards arrive
+    unpredictably, like surprise spot bonuses. Fixed-interval rewards come on a clock, like monthly
+    targets, while variable-interval rewards arrive at random times. Variable-ratio schedules produce
+    the most persistent behavior, which is why surprise recognition keeps working after steady praise
+    goes stale.
   </p>
 
-  <h2 id="parenting-classroom">Parenting and Classroom Reinforcement</h2>
+  <h2 id="parenting-classroom">How does reinforcement work in parenting and classrooms?</h2>
+  <p>
+    Parents and teachers use positive reinforcement constantly: praise, privileges, and token systems
+    reward desired behavior so it repeats. When caregivers stop rewarding an unwanted behavior, it
+    typically fades through extinction, often after a temporary spike called an extinction burst. The
+    key variable is consistency: the payoff must stop every time, without exceptions.
+  </p>
   <p>
     Families and schools use behavioral principles constantly, described here in general,
     descriptive terms. Parents reinforce desired behavior with praise, privileges, and attention.
@@ -102,10 +107,15 @@ const related = [
     work, then exchange them for rewards. Both are positive reinforcement systems.
   </p>
   <p>
-    Extinction shows up when caregivers stop rewarding an unwanted behavior. A tantrum that once
-    earned a toy but now earns calm, consistent non-response typically fades over time, often after
-    a temporary spike called an extinction burst. Consistency matters more than intensity: the
-    behavior fades only if the payoff stops reliably.
+    A tantrum that once earned a toy but now earns calm, consistent non-response typically fades
+    over time, often after a temporary spike called an extinction burst. Consistency matters more
+    than intensity: the behavior fades only if the payoff stops reliably.
+  </p>
+  <p>
+    There is also the Premack principle, sometimes called "grandma's rule": a preferred activity
+    reinforces a less preferred one. "Homework first, then video games" works because the more
+    probable behavior (gaming) reinforces the less probable one (homework). Psychologist David
+    Premack described the effect in 1959.
   </p>
   <p>
     Classrooms also demonstrate shaping. A teacher does not expect a perfect essay on day one;
@@ -114,27 +124,26 @@ const related = [
     trainers use with animals and coaches use with athletes.
   </p>
 
-  <h2 id="advertising">Advertising and Marketing</h2>
+  <h2 id="advertising">How does advertising use behavioral psychology?</h2>
   <p>
-    Advertising leans heavily on classical conditioning. Pair a soft drink with laughter, summer
-    light, and a catchy song often enough, and the product itself starts to evoke good feelings.
-    Celebrity endorsements work the same way: the admiration attached to the person transfers to
-    the brand. The pairing does not need to be logical; it only needs to be repeated.
+    Advertising leans on classical conditioning: pair a product with pleasant music, attractive
+    imagery, or celebrities often enough, and the good feelings transfer to the brand. The pairing
+    does not need to be logical, only repeated. Operant conditioning drives loyalty programs, where
+    points and rewards reinforce repeat buying, one purchase at a time.
   </p>
   <p>
-    Operant conditioning drives the rest of the marketing playbook. Loyalty programs reinforce
-    repeat purchases with points. Free samples reinforce trial. Limited-time offers add urgency
-    that functions like a mild punisher for delaying. E-commerce sites that reward reviews with
-    discounts are reinforcing user-generated content, one coupon at a time.
+    Operant conditioning drives the rest of the marketing playbook. Free samples reinforce trial.
+    Limited-time offers add urgency that functions like a mild punisher for delaying. E-commerce
+    sites that reward reviews with discounts are reinforcing user-generated content, one coupon at
+    a time.
   </p>
 
-  <h2 id="sports">Sports Training Routines</h2>
+  <h2 id="sports">How is behavioral psychology used in sports training?</h2>
   <p>
     Athletic training is applied behaviorism. Coaches break skills into components, drill each one,
     and reinforce correct execution immediately: shaping with continuous reinforcement. As the skill
-    stabilizes, feedback thins out to intermittent schedules, which maintain performance over long
-    seasons. Video review pairs the correct movement with positive feedback, strengthening the
-    association.
+    stabilizes, feedback thins to intermittent schedules, which maintain performance over long
+    seasons. Video review pairs correct movement with positive feedback.
   </p>
   <p>
     Pre-performance routines illustrate classical conditioning. A basketball player's free-throw
@@ -143,12 +152,12 @@ const related = [
     with successful, well-rehearsed execution.
   </p>
 
-  <h2 id="pets">Pet Training</h2>
+  <h2 id="pets">How does pet training demonstrate operant conditioning?</h2>
   <p>
-    Dog training is the most visible everyday demonstration of operant conditioning. A treat given
-    within seconds of a sit reinforces sitting. A clicker marks the exact moment of the desired
-    behavior, bridging the gap between action and reward. Undesired behaviors like jumping are
-    typically reduced by withholding attention, which is extinction, rather than by confrontation.
+    Dog training is operant conditioning in plain view. A treat delivered within seconds of a sit
+    reinforces sitting. A clicker marks the exact moment of the desired behavior, bridging the gap
+    between action and reward. Jumping is usually reduced by withholding attention, which is
+    extinction, rather than by confrontation.
   </p>
   <p>
     Shaping is how complex tricks are taught: the trainer rewards a look toward the target, then a
@@ -156,14 +165,24 @@ const related = [
     procedures behavior analysts use with people, which is why animal training is a common
     introduction to the science.
   </p>
-
-  <h2 id="health">Health Behaviors</h2>
   <p>
-    Health-related routines follow the same laws. A person who walks after dinner and immediately
-    feels calmer has paired the walk with relief: reinforcement that maintains the routine.
-    Medication reminders and pill organizers reduce missed doses by adding environmental cues,
-    which is stimulus control, a behavioral concept. Gyms that charge no-show fees add a mild
-    punisher for skipping, while workout partners add social reinforcement for showing up.
+    Trainers also use chaining: linking simple behaviors into a sequence, so a dog learns sit, then
+    stay, then come as one chain. Each behavior in the chain becomes the cue for the next, which is
+    how agility courses and service-dog routines are built.
+  </p>
+
+  <h2 id="health">How do behavioral principles apply to health habits?</h2>
+  <p>
+    Health routines follow the same laws. A walk that is followed by calm has been reinforced, so it
+    repeats. Pill organizers and reminders add environmental cues, which is stimulus control. And
+    professionals who work on behavior change define target behaviors precisely, measure a baseline,
+    and adjust reinforcement systematically.
+  </p>
+  <p>
+    The same logic runs through fitness habits. Gyms that charge no-show fees add a mild punisher
+    for skipping, while workout partners add social reinforcement for showing up. Small, immediate
+    payoffs beat distant, abstract ones, which is why routines that feel good right away are the
+    ones that stick.
   </p>
   <p>
     Professionals who work on behavior change, such as behavior analysts and health psychologists,

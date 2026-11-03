@@ -2,12 +2,12 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
 const toc = [
-  { id: "definition", label: "Definition of Behavioral Psychology" },
-  { id: "core-principles", label: "Core Principles" },
-  { id: "history", label: "Brief History and Key Figures" },
-  { id: "other-perspectives", label: "How It Differs From Other Perspectives" },
-  { id: "applications", label: "Real-World Applications" },
-  { id: "misconceptions", label: "Common Misconceptions" },
+  { id: "definition", label: "What is behavioral psychology?" },
+  { id: "core-principles", label: "What are the core principles of behavioral psychology?" },
+  { id: "history", label: "Who are the key figures in the history of behavioral psychology?" },
+  { id: "other-perspectives", label: "How does behavioral psychology differ from other perspectives?" },
+  { id: "applications", label: "Where is behavioral psychology used in the real world?" },
+  { id: "misconceptions", label: "What are common misconceptions about behavioral psychology?" },
 ];
 
 const takeaways = [
@@ -48,6 +48,7 @@ const faqs = [
 const sources = [
   { label: "American Psychological Association", href: "https://www.apa.org" },
   { label: "Encyclopaedia Britannica: Behaviourism", href: "https://www.britannica.com/science/behaviourism-psychology" },
+  { label: "Haggbloom et al. (2002), Review of General Psychology", href: "https://doi.org/10.1037/1089-2680.6.2.139" },
 ];
 
 const related = [
@@ -72,7 +73,7 @@ const related = [
   crumbs={[{ label: "What Is Behavioral Psychology?" }]}
   related={related}
 >
-  <h2 id="definition">Definition of Behavioral Psychology</h2>
+  <h2 id="definition">What is behavioral psychology?</h2>
   <p>
     Behavioral psychology, also known as behaviorism, is a branch of psychology that studies how the
     environment shapes behavior. Its central claim is that behavior is learned through interaction with
@@ -93,6 +94,12 @@ const related = [
     human activity, from a toddler learning to share toys to a professional athlete refining a swing.
   </p>
   <p>
+    Behavior analysts often compress this logic into three letters: ABC, antecedent, behavior,
+    consequence. The antecedent is what happens right before a behavior, the behavior is what the
+    person does, and the consequence is what follows. Most behavioral interventions simply rearrange
+    one of the three: change the trigger, the action, or the payoff.
+  </p>
+  <p>
     Today the ideas appear well beyond academic journals. Teachers use reinforcement schedules in
     classrooms, companies design incentive systems around them, and trainers shape athletic routines
     with the same logic B.F. Skinner once demonstrated with laboratory animals. The vocabulary of the
@@ -100,10 +107,12 @@ const related = [
     the principles are so widely applicable.
   </p>
 
-  <h2 id="core-principles">Core Principles</h2>
+  <h2 id="core-principles">What are the core principles of behavioral psychology?</h2>
   <p>
-    A handful of principles carry almost all of behavioral psychology's explanatory weight. Learn these
-    and you can recognize the field's fingerprints in settings from dog parks to boardrooms.
+    Behavioral psychology rests on three ideas: classical conditioning, which links events together
+    through association; operant conditioning, which shapes behavior through consequences like
+    reinforcement and punishment; and the rule that psychology should study what it can observe and
+    measure. Together they explain habits, skills, and fears.
   </p>
 
   <h3 id="classical-conditioning">Classical conditioning: learning by association</h3>
@@ -127,6 +136,12 @@ const related = [
     to fear a tone can be gradually reintroduced to it in safe conditions, a principle behind many
     desensitization procedures used by professionals.
   </p>
+  <p>
+    Pavlov also found that dogs generalize: after learning to salivate to one tone, they responded to
+    similar tones too. Discrimination is the reverse: learning to respond to one signal but not another.
+    A dog that comes when it hears its own name but ignores a similar-sounding word has learned
+    discrimination.
+  </p>
 
   <h3 id="operant-conditioning">Operant conditioning: learning by consequences</h3>
   <p>
@@ -148,6 +163,12 @@ const related = [
     especially persistent habits: slot machines and social media notifications both exploit variable
     schedules of reinforcement to keep people coming back.
   </p>
+  <p>
+    There is also the Premack principle, sometimes called "grandma's rule": a preferred activity can
+    reinforce a less preferred one. "Finish your homework, then you can play outside" works because
+    the more probable behavior (playing) reinforces the less probable one (homework). Psychologist
+    David Premack described the effect in 1959.
+  </p>
 
   <h3 id="observable-focus">The observable behavior focus</h3>
   <p>
@@ -163,11 +184,19 @@ const related = [
     remains one of the field's defining strengths and its most important contribution to research
     standards.
   </p>
-
-  <h2 id="history">Brief History and Key Figures</h2>
   <p>
-    Behavioral psychology emerged in the early twentieth century as a rebellion against the
-    introspective psychology of the time. Four figures shaped it more than any others.
+    Skinner later drew a line between his own view, which he called radical behaviorism, and the
+    stricter methodological behaviorism of Watson's era. Radical behaviorism treated thoughts and
+    feelings as behaviors to be explained rather than as explanations, which opened the door to
+    studying private events without giving up scientific standards.
+  </p>
+
+  <h2 id="history">Who are the key figures in the history of behavioral psychology?</h2>
+  <p>
+    Behavioral psychology took shape in the early 1900s as a rebellion against introspective
+    psychology. Four figures defined it: Ivan Pavlov, who discovered classical conditioning; John B.
+    Watson, who founded behaviorism in 1913; B.F. Skinner, who built operant conditioning; and Albert
+    Bandura, who added observational learning.
   </p>
 
   <h3 id="pavlov">Ivan Pavlov (1849 to 1936)</h3>
@@ -192,8 +221,9 @@ const related = [
     Skinner built the second pillar of the field with operant conditioning. Using the Skinner box, he
     mapped how schedules of reinforcement shape behavior with extraordinary precision. His book
     "Beyond Freedom and Dignity" extended the argument to society itself, claiming that behavior,
-    including apparently free choices, could be understood through environmental contingencies. He
-    remains one of the most cited figures in psychology.
+    including apparently free choices, could be understood through environmental contingencies. In
+    2002, a Review of General Psychology survey ranked Skinner the most eminent psychologist of the
+    20th century (Haggbloom et al.).
   </p>
 
   <h3 id="bandura">Albert Bandura (1925 to 2021)</h3>
@@ -204,7 +234,13 @@ const related = [
     thoughts and expectations into behavioral theory without abandoning its scientific standards.
   </p>
 
-  <h2 id="other-perspectives">How It Differs From Other Perspectives</h2>
+  <h2 id="other-perspectives">How does behavioral psychology differ from other perspectives?</h2>
+  <p>
+    Behavioral psychology differs from other schools by where it looks for causes. Cognitive
+    psychology studies internal mental processes, humanistic psychology studies growth and choice,
+    and psychodynamic theory studies unconscious conflict. Behaviorism alone starts from the
+    environment: it explains behavior through learning history, not inner life.
+  </p>
   <p>
     Psychology contains several major perspectives, each answering the same questions in a different
     way. The table below compares behavioral psychology with three of the other classic schools. Our
@@ -229,14 +265,22 @@ const related = [
     Modern psychologists rarely work inside a single perspective. A researcher might use behavioral
     methods to change habits while acknowledging the cognitive beliefs that sustain them. Still,
     knowing where behavioral psychology stands helps you understand what each school contributes and
-    what each tends to miss.
+    what each tends to miss. For the related question of how psychology differs from the
+    interdisciplinary field of behavioral science, see our comparison of
+    <a href="/behavioral-science-vs-psychology/">behavioral science vs psychology</a>.
   </p>
 
-  <h2 id="applications">Real-World Applications</h2>
+  <h2 id="applications">Where is behavioral psychology used in the real world?</h2>
   <p>
-    Behavioral principles are everywhere once you know how to spot them. The following are descriptive
-    overviews of where the field shows up in practice. For vivid, concrete illustrations, see our
-    collection of <a href="/behavioral-psychology-examples/">behavioral psychology examples in everyday life</a>.
+    Behavioral psychology shows up wherever people learn: in classrooms, where teachers use praise
+    and token systems; in workplaces, where bonuses and feedback shape performance; in advertising,
+    where brands pair products with pleasant images; in sports, where coaches use repetition and
+    feedback; and in parenting, where consequences teach routines.
+  </p>
+  <p>
+    The following are descriptive overviews of where the field shows up in practice. For vivid,
+    concrete illustrations, see our collection of
+    <a href="/behavioral-psychology-examples/">behavioral psychology examples in everyday life</a>.
   </p>
 
   <h3 id="education">Education</h3>
@@ -281,7 +325,13 @@ const related = [
     general terms; individual families apply them in their own ways.
   </p>
 
-  <h2 id="misconceptions">Common Misconceptions</h2>
+  <h2 id="misconceptions">What are common misconceptions about behavioral psychology?</h2>
+  <p>
+    The biggest misconception is that behavioral psychology treats people as mindless machines. It
+    doesn't. Modern behaviorism studies expectations, observation, and self-regulation alongside
+    conditioning, and its tools, reinforcement, shaping, extinction, are descriptive principles, not
+    a claim that inner life doesn't exist. Here is what the field actually says.
+  </p>
   <p>
     <strong>It ignores the mind entirely.</strong> Early behaviorists were skeptical of studying
     consciousness, but modern behavioral psychology, especially through Bandura's work, acknowledges
