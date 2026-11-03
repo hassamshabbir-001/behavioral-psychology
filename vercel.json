@@ -1,0 +1,1 @@
+{"$schema":"https://openapi.vercel.sh/vercel.json","redirects":[{"destination":"https://behavioralpsychology.pro/:path*","has":[{"type":"host","value":"www.behavioralpsychology.pro"}],"permanent":true,"source":"/:path*"}]}
