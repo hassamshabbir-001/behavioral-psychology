@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Hassam Shabbir",
+        "url": "https://behavioralpsychology.pro/author/hassam-shabbir/",
+        "image": "https://behavioralpsychology.pro/images/author-hassam-shabbir.webp",
+        "jobTitle": "Psychologist, Writer and Author",
+        "sameAs": [
+          "https://www.instagram.com/hassam_shabbir_official/",
+          "https://www.threads.net/@hassam_shabbir_official",
+          "https://www.linkedin.com/in/hassam-shabbir-sxo/"
+        ],
+        "description": "Psychologist, writer and author covering behavioral psychology."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Hassam Shabbir, Author"
+  description="Hassam Shabbir is a psychologist, writer, and author covering behavioral psychology in plain, evidence-reviewed language."
+  ogImage="/images/author-hassam-shabbir.webp"
+  jsonLd={jsonLd}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="/">Home</a> &gt; <span>Author</span></p>
+      <h1>Hassam Shabbir</h1>
+      <p>Psychologist, writer, and author. I write about behavioral psychology in plain language anyone can understand.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="wrap">
+      <div class="prose">
+        <p style="text-align:center; margin-bottom:28px;">
+          <img
+            src="/images/author-hassam-shabbir.webp"
+            alt="Portrait of Hassam Shabbir"
+            width="400"
+            height="400"
+            style="border-radius:50%; max-width:280px; height:auto;"
+            loading="lazy"
+          />
+        </p>
+
+        <p>I am Hassam Shabbir. I am a psychologist by training, a writer by habit, and an author by conviction. This site is my attempt to do something I believe matters: explain behavioral psychology the way it deserves to be explained, clearly, honestly, and without the jargon that keeps good ideas locked inside textbooks.</p>
+
+        <h2>My Background</h2>
+        <p>I earned my B.S. in Psychology from the University of Sargodha, where I developed a lasting interest in how behavior is shaped, how habits form, and how environments influence the choices people make. That interest never left me. It runs through everything I write.</p>
+        <p>Beyond psychology, I work as an SEO, AEO, and GEO strategist, which means I spend my professional life thinking about how people search for information and how quality content reaches the readers who need it. That work taught me something important: the best information in the world is useless if nobody can find it or understand it. This site applies that lesson directly. Every article is structured so a student, a career changer, or a curious reader can find the answer they came for and understand it on the first read.</p>
+
+        <h2>Training and Teaching</h2>
+        <p>I have trained more than 400 professionals in AI, prompt engineering, and digital skills, and I founded Rise Above Minds, a nonprofit that has taught digital skills to more than 100 students. Teaching sharpened my writing. When you have to explain a complex idea to a room full of people with different backgrounds, you learn quickly what works and what does not. I write every article on this site the way I would teach it: start simple, build up, and never hide behind terminology.</p>
+        <p>Training also taught me to respect the reader's time. People do not come to an educational site to admire the author's vocabulary. They come because they need to understand something, decide something, or learn something. So I write with a practical reader in mind: definitions where they are needed, examples that make abstract ideas concrete, and no filler that pads the word count without adding understanding.</p>
+
+        <h2>Why This Site Exists</h2>
+        <p>Behavioral psychology shapes far more of daily life than most people realize. The principles behind reinforcement, habit formation, and behavior change sit behind classrooms, workplaces, health programs, and public policy. Yet public writing about the field tends to fall into two traps: academic papers that only specialists can read, or pop-psychology takes that oversimplify the science until it is misleading.</p>
+        <p>I started Behavioral Psychology to fill the gap between those two. Every article here is researched from reputable sources, written in my own words, and reviewed by me personally before publication. Salary figures, job growth numbers, and other hard claims always come from named sources such as the U.S. Bureau of Labor Statistics or professional surveys. You can read the full process on the <a href="/editorial-standards/">editorial standards</a> page.</p>
+
+        <h2>An Important Clarification</h2>
+        <p>I want to be completely clear about something: I am not a licensed clinician. This site is an educational publication, not a practice. Nothing I write here is medical or psychological advice, and nothing here should be used to diagnose or treat any condition. If you are looking for help with a mental health concern, please consult a qualified professional. The <a href="/disclaimer/">disclaimer</a> page explains this in full and lists emergency resources for readers in the United States.</p>
+
+        <h2>Find Me Elsewhere</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/hassam_shabbir_official/" target="_blank" rel="noopener">Instagram: @hassam_shabbir_official</a></li>
+          <li><a href="https://www.threads.net/@hassam_shabbir_official" target="_blank" rel="noopener">Threads: @hassam_shabbir_official</a></li>
+          <li><a href="https://www.linkedin.com/in/hassam-shabbir-sxo/" target="_blank" rel="noopener">LinkedIn: Hassam Shabbir</a></li>
+        </ul>
+
+        <p>If you have a question about an article, spotted an error, or want to suggest a topic, I would genuinely like to hear from you. The best way to reach me is through the <a href="/contact/">contact page</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

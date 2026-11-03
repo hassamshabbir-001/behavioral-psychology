@@ -1,0 +1,212 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const toc = [
+  { id: "quick-answer", label: "The Quick Answer" },
+  { id: "behavioral-science", label: "What Behavioral Science Covers" },
+  { id: "psychology", label: "What Psychology Covers" },
+  { id: "comparison", label: "Head-to-Head Comparison" },
+  { id: "degree-paths", label: "Degree Paths for Each" },
+  { id: "careers", label: "Careers for Each" },
+  { id: "which-to-study", label: "Which Should You Study?" },
+];
+
+const takeaways = [
+  "Behavioral science is an interdisciplinary field studying decision-making and behavior, drawing on psychology, economics, sociology, and neuroscience.",
+  "Psychology is a single academic discipline focused on mind and behavior, with clinical, research, and applied branches.",
+  "Behavioral psychology is a subfield of psychology, while behavioral science is the broader umbrella.",
+  "Degree and career paths overlap but differ: psychology offers licensure-track clinical roles; behavioral science leans toward research, policy, and organizational roles.",
+  "The right choice depends on whether you want a discipline with clinical options or an interdisciplinary toolkit for applied problems.",
+];
+
+const faqs = [
+  {
+    q: "Is behavioral science the same as psychology?",
+    a: "No. Psychology is a single discipline studying mind and behavior, while behavioral science is an interdisciplinary field that combines psychology with economics, sociology, anthropology, and neuroscience to study human decision-making and behavior. Behavioral psychology is a subfield within psychology; behavioral science is the wider umbrella that contains it alongside other disciplines."
+  },
+  {
+    q: "What degree do you need for behavioral science?",
+    a: "Behavioral science programs exist at the bachelor's and master's levels, often under titles like behavioral science, behavioral economics, or decision science. Many practitioners instead earn a psychology, economics, or public policy degree with a behavioral focus. For research-heavy roles, a PhD in psychology, economics, or a related field is typical."
+  },
+  {
+    q: "Can you become a therapist with a behavioral science degree?",
+    a: "Generally no, not directly. Therapy and counseling licensure typically requires a degree in psychology, counseling, or social work from an accredited program, plus supervised clinical hours. A behavioral science degree is better suited to research, policy, organizational, and applied decision-science roles unless you add a clinical graduate program."
+  },
+  {
+    q: "What jobs use behavioral science?",
+    a: "Common roles include behavioral researcher, UX researcher, policy analyst, organizational development consultant, market researcher, and behavioral insights advisor for government. The field's growth area is applying behavioral findings, like nudge theory and choice architecture, to public policy, product design, and workplace programs."
+  },
+  {
+    q: "Which pays more, behavioral science or psychology careers?",
+    a: "It depends on the specific role and setting rather than the field name. Licensed clinical psychologists in private practice and organizational psychologists in industry are among the higher earners on the psychology side. On the behavioral science side, senior roles in tech, consulting, and policy can pay very well. Early-career research roles in both fields tend to be modest until experience and credentials accumulate."
+  },
+];
+
+const sources = [
+  { label: "American Psychological Association", href: "https://www.apa.org" },
+  { label: "Encyclopaedia Britannica", href: "https://www.britannica.com" },
+];
+
+const related = [
+  { title: "Explore Degrees", href: "/degrees/", description: "Degree paths for psychology and behavioral science." },
+  { title: "Explore Careers", href: "/careers/", description: "Careers across both fields." },
+  { title: "What Is Behavioral Psychology?", href: "/what-is-behavioral-psychology/", description: "The psychology subfield at the heart of the confusion." },
+];
+---
+
+<ArticleLayout
+  title="Behavioral Science vs Psychology: What's Different?"
+  description="Behavioral science vs psychology: learn how these fields differ in focus, methods, degrees, and careers so you can pick the right one."
+  date="2026-11-03"
+  heroImage="/images/hero-behavioral-science-vs-psychology.webp"
+  heroAlt="Two diverging paths representing a conceptual comparison"
+  deck="Behavioral science and psychology sound like the same thing, and they overlap heavily. But one is a single discipline and the other is an interdisciplinary field, and the difference matters for degrees, careers, and licensure. Here is the full comparison."
+  figcaption="Two paths, one landscape: behavioral science and psychology cover overlapping territory but start from different places."
+  toc={toc}
+  takeaways={takeaways}
+  faqs={faqs}
+  sources={sources}
+  crumbs={[{ label: "Articles", href: "/blog/" }, { label: "Behavioral Science vs Psychology" }]}
+  related={related}
+>
+  <h2 id="quick-answer">The Quick Answer</h2>
+  <p>
+    Psychology is a single academic discipline devoted to the scientific study of mind and behavior.
+    Behavioral science is an interdisciplinary field that studies human behavior and decision-making
+    by combining psychology with economics, sociology, anthropology, and neuroscience. In short:
+    psychology is one discipline; behavioral science is a team of disciplines working on the same
+    questions.
+  </p>
+  <p>
+    The confusion is understandable because behavioral psychology, a subfield of psychology, sits
+    inside behavioral science too. Think of it as nesting: behavioral psychology lives within
+    psychology, and psychology contributes to the broader behavioral science umbrella. The rest of
+    this article unpacks what each one covers, how they compare, and what the difference means for
+    your education and career.
+  </p>
+
+  <h2 id="behavioral-science">What Behavioral Science Covers</h2>
+  <p>
+    Behavioral science studies how people make decisions and behave, drawing on multiple
+    disciplines at once. A behavioral scientist studying retirement savings might combine
+    psychological research on present bias, economic models of incentives, sociological data on
+    norms, and neuroscientific findings on reward processing. No single discipline owns the
+    question; the field borrows whatever tools explain the behavior.
+  </p>
+  <p>
+    Its signature contributions are applied. Nudge theory, popularized by Richard Thaler and Cass
+    Sunstein, shows how small changes in choice architecture, like making organ donation opt-out
+    rather than opt-in, shift behavior at scale. Behavioral insights teams in governments apply
+    these findings to tax compliance, public health, and energy use. In industry, behavioral
+    scientists work in user-experience research, product design, and organizational behavior,
+    wherever understanding real human decisions improves outcomes.
+  </p>
+  <p>
+    Methodologically, behavioral science is pluralist. It uses experiments from psychology, surveys
+    and field studies from sociology, statistical modeling from economics, and brain imaging from
+    neuroscience. The unifying thread is not a method but a problem: explaining and influencing
+    human behavior in real-world settings.
+  </p>
+
+  <h2 id="psychology">What Psychology Covers as a Discipline</h2>
+  <p>
+    Psychology is the scientific study of mind and behavior as a standalone discipline with its own
+    departments, journals, licensing systems, and professional organizations like the American
+    Psychological Association. It contains many subfields: clinical, cognitive, developmental,
+    social, industrial-organizational, and behavioral psychology among them.
+  </p>
+  <p>
+    What distinguishes psychology is depth within its own traditions. Clinical psychology trains
+    practitioners to assess and treat mental health conditions. Cognitive psychology maps memory,
+    attention, and reasoning. Developmental psychology traces growth across the lifespan.
+    <a href="/what-is-behavioral-psychology/">Behavioral psychology</a> studies how the environment
+    shapes observable behavior through learning. Each subfield has its own theories, methods, and
+    training paths, but all share the discipline's scientific standards.
+  </p>
+  <p>
+    Psychology also has something behavioral science lacks as a field: a licensure system. Only
+    graduates of accredited psychology, counseling, or social work programs can become licensed
+    therapists or clinical psychologists. That credentialing power makes psychology the route for
+    anyone who wants to practice clinically.
+  </p>
+
+  <h2 id="comparison">Head-to-Head Comparison</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col">Behavioral Science</th><th scope="col">Psychology</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Nature of the field</th><td>Interdisciplinary: psychology, economics, sociology, neuroscience</td><td>Single academic discipline with subfields</td></tr>
+        <tr><th scope="row">Core focus</th><td>Decision-making and behavior in real-world contexts</td><td>Mind and behavior, from neurons to therapy</td></tr>
+        <tr><th scope="row">Typical methods</th><td>Field experiments, surveys, behavioral economics models, nudges</td><td>Laboratory experiments, clinical assessment, longitudinal studies</td></tr>
+        <tr><th scope="row">Typical degrees</th><td>Behavioral science, behavioral economics, decision science; or psychology/economics/policy with behavioral focus</td><td>Psychology at associate through doctoral levels, plus counseling and clinical tracks</td></tr>
+        <tr><th scope="row">Clinical licensure</th><td>Not a licensure path on its own</td><td>Licensed therapist, counselor, and clinical psychologist routes</td></tr>
+        <tr><th scope="row">Typical careers</th><td>UX researcher, policy analyst, behavioral insights advisor, organizational consultant</td><td>Clinical psychologist, counselor, school psychologist, I-O psychologist, researcher</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="degree-paths">Degree Paths for Each</h2>
+  <p>
+    <strong>Behavioral science degrees.</strong> Dedicated bachelor's and master's programs in
+    behavioral science, behavioral economics, or decision science exist but are less common than
+    psychology programs. Many students build the equivalent profile through a psychology,
+    economics, or public policy degree with behavioral coursework and research experience. At the
+    doctoral level, PhDs in psychology, economics, or business with a behavioral focus are the
+    standard research credentials.
+  </p>
+  <p>
+    <strong>Psychology degrees.</strong> The path is more standardized: an associate or bachelor's
+    in psychology, then a master's for counseling, school psychology, or applied roles, then a PhD
+    or PsyD for clinical practice and senior research roles. Our <a href="/degrees/">degree hub</a>
+    walks through each level, including specialized tracks like the
+    <a href="/degrees/ms-behavioral-psychology/">MS in behavioral psychology</a> and the
+    <a href="/degrees/phd-in-behavioral-psychology/">PhD in behavioral psychology</a>.
+  </p>
+  <p>
+    The two paths converge in research. A behavioral science researcher and a psychology researcher
+    may run similar experiments and publish in overlapping journals. They diverge at the applied
+    end: only the psychology path leads to clinical licensure.
+  </p>
+
+  <h2 id="careers">Careers for Each</h2>
+  <p>
+    <strong>Behavioral science careers</strong> cluster around applied decision research: UX
+    research in tech, behavioral insights units in government, policy analysis, market research,
+    and organizational development consulting. These roles value experimental skills, statistics,
+    and the ability to translate findings into interventions like nudges and choice architecture.
+    Our <a href="/careers/">careers hub</a> covers several of these in detail.
+  </p>
+  <p>
+    <strong>Psychology careers</strong> include everything above plus the licensed clinical roles
+    that define the discipline for most people: clinical psychologist, counselor, school
+    psychologist, and marriage and family therapist. Research psychologists work in universities,
+    healthcare systems, and industry. Industrial-organizational psychologists apply psychological
+    science to workplaces, overlapping with the behavioral science side.
+  </p>
+  <p>
+    Salaries vary more by role, setting, and seniority than by field label. Licensed clinicians in
+    private practice and senior industry researchers are among the higher earners in both camps;
+    entry-level research positions start modestly in both.
+  </p>
+
+  <h2 id="which-to-study">Which Should You Study?</h2>
+  <p>
+    This is educational guidance, not personalized advice, but the decision framework is
+    straightforward. Choose psychology if you want the option of clinical licensure, if you want
+    depth in one discipline's theories and methods, or if you are drawn to therapy, assessment, or
+    traditional research careers.
+  </p>
+  <p>
+    Choose behavioral science, or a psychology degree with a behavioral focus, if you are drawn to
+    interdisciplinary problems: why people save too little, how to design better public policies,
+    how to build products people actually use. The field suits students who like borrowing tools
+    from economics, data science, and design alongside psychology.
+  </p>
+  <p>
+    Either way, the foundations overlap heavily. Undergraduate psychology coursework serves both
+    paths, and graduate programs in both fields value research experience, statistics, and clear
+    writing. Start with the problems that interest you most, and let the degree follow.
+  </p>
+</ArticleLayout>

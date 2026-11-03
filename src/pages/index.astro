@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles } from '../data/articles';
+
+const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const checkSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>';
+const bookSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg>';
+const layersSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>';
+
+const latest = [...articles].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 4);
+
+const topics = [
+  { img: '/images/topics-degree-programs.webp', alt: 'University campus with students', label: 'Degrees and Programs', href: '/degrees/' },
+  { img: '/images/topics-careers.webp', alt: 'Professionals collaborating in a modern office', label: 'Careers and Salaries', href: '/careers/' },
+  { img: '/images/topics-perspective.webp', alt: 'Observing everyday behavior in a public setting', label: 'The Behavioral Perspective', href: '/behavioral-perspective-psychology/' },
+  { img: '/images/topics-everyday-examples.webp', alt: 'Everyday routine moment at home', label: 'Everyday Examples', href: '/behavioral-psychology-examples/' },
+  { img: '/images/topics-theorists.webp', alt: 'Classic books in a vintage library', label: 'History and Key Figures', href: '/what-is-behavioral-psychology/' },
+  { img: '/images/topics-techniques.webp', alt: 'Handwritten study notes in an open notebook', label: 'Behavioral Science vs Psychology', href: '/behavioral-science-vs-psychology/' },
+];
+
+const faqs = [
+  { q: 'What is this website about?', a: 'Behavioral Psychology is an independent educational publication that explains the science of behavior in plain language. It covers core ideas, the history of the field, degree programs, careers, and everyday applications.' },
+  { q: 'Who writes the articles?', a: 'Every article is written and evidence-reviewed by Hassam Shabbir, a psychologist, writer, and author. You can read his full background on the author profile page.' },
+  { q: 'Is this site a substitute for therapy?', a: 'No. All content here is educational only and is never a substitute for professional medical or psychological advice, diagnosis, or treatment. The author is not a licensed clinician. See the disclaimer page for details and US helpline resources.' },
+  { q: 'What degree do I need to work in behavioral psychology?', a: 'It depends on the role. Many applied roles are open to bachelor\u2019s and master\u2019s graduates, while research and university teaching usually require a doctorate. The degrees hub compares every level side by side.' },
+  { q: 'Can I study behavioral psychology online?', a: 'Yes. Accredited online programs exist at the bachelor\u2019s, master\u2019s, and doctoral levels. The online degree guide explains accreditation, formats, and what to check before enrolling.' },
+  { q: 'How is this content researched?', a: 'Articles are built from textbooks, peer-reviewed literature, and official sources such as the APA and the US Bureau of Labor Statistics, then reviewed for accuracy. The editorial standards page documents the full process, including the corrections policy.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://behavioralpsychology.pro/#website",
+      "url": "https://behavioralpsychology.pro/",
+      "name": "Behavioral Psychology",
+      "description": "Evidence-reviewed guides on behavioral psychology: core ideas, degree programs, careers, and everyday applications.",
+      "publisher": { "@id": "https://behavioralpsychology.pro/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://behavioralpsychology.pro/#organization",
+      "name": "Behavioral Psychology",
+      "url": "https://behavioralpsychology.pro/",
+      "logo": "https://behavioralpsychology.pro/favicon.svg",
+      "contactPoint": { "@type": "ContactPoint", "email": "info@behavioralpsychology.pro", "contactType": "customer service" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://behavioralpsychology.pro/" }]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ]
+};
+---
+<BaseLayout
+  title="Behavioral Psychology: Guides on Behavior, Degrees & Careers"
+  description="Evidence-reviewed guides on behavioral psychology: core ideas, degree programs, careers, and everyday applications, explained in plain language."
+  ogImage="/images/hero-behavioral-psychology.webp"
+  jsonLd={schema}
+>
+  <style>
+    .stats-band { background: #fff; border-bottom: 1px solid var(--line); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto; }
+    .stat { text-align: center; padding: 34px 20px; }
+    .stat + .stat { border-left: 1px solid var(--line); }
+    .stat strong { display: block; font-size: 40px; font-weight: 800; color: var(--purple-deep); letter-spacing: -1px; line-height: 1; }
+    .stat span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); font-weight: 600; }
+    .intro-statement { text-align: center; max-width: 760px; margin: 0 auto; }
+    .intro-statement h2 { font-size: 32px; color: var(--navy); font-weight: 800; letter-spacing: -0.5px; line-height: 1.3; margin: 0 0 16px; }
+    .intro-statement p { color: var(--muted); font-size: 16.5px; margin: 0; }
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat + .stat { border-left: none; border-top: 1px solid var(--line); }
+      .stat { padding: 24px 20px; }
+    }
+  </style>
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <svg class="hero-hex" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#8B7CF6" stroke-width="1.5" opacity="0.35">
+        <path d="M1200 80l60 34.6v69.2l-60 34.6-60-34.6V114.6z"/>
+        <path d="M200 480l70 40.4v80.8l-70 40.4-70-40.4v-80.8z"/>
+        <path d="M1080 520l45 26v52l-45 26-45-26v-52z"/>
+      </g>
+      <g fill="none" stroke="#7CFC9A" stroke-width="1.5" opacity="0.4">
+        <path d="M880 420l80 46.2v92.4l-80 46.2-80-46.2v-92.4z"/>
+      </g>
+    </svg>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="pill-badge">An Educational Guide to Behavioral Psychology</span>
+        <h1>Understand How <span class="accent">Behavior</span> Really Works</h1>
+        <p class="lead">Evidence-reviewed guides on the science of behavior: core ideas, degree programs, careers, and everyday applications, explained in plain language.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-purple" href="/what-is-behavioral-psychology/">What Is Behavioral Psychology? <Fragment set:html={arrow} /></a>
+          <a class="btn btn-outline" href="/degrees/">Explore Degrees</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-photo">
+          <img src="/images/hero-behavioral-psychology.webp" alt="A calm conversation in a bright modern psychology office" width="1168" height="784" fetchpriority="high" />
+        </div>
+        <span class="float-chip chip-1">
+          <span class="chip-icon"><Fragment set:html={bookSvg} /></span>
+          Evidence-reviewed guides
+        </span>
+        <span class="float-chip chip-2">
+          <span class="chip-icon"><Fragment set:html={layersSvg} /></span>
+          11 research-backed topics
+        </span>
+        <div class="hero-dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Honest stats band -->
+  <div class="stats-band">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat"><strong>10</strong><span>In-depth guides published</span></div>
+        <div class="stat"><strong>11</strong><span>Research clusters covered</span></div>
+        <div class="stat"><strong>6</strong><span>Degree and career pathways</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Topics grid -->
+  <section class="section">
+    <div class="wrap">
+      <div class="intro-statement" style="margin-bottom: 48px;">
+        <span class="kicker">Explore the field</span>
+        <h2>Behavioral psychology topics, organized for learning</h2>
+        <p>Start with the foundations, compare degree paths, explore careers, or see the science in everyday life.</p>
+      </div>
+      <div class="topic-grid">
+        {topics.map((t) => (
+          <a class="topic-card" href={t.href}>
+            <img src={t.img} alt={t.alt} width="784" height="1168" loading="eager" decoding="async" />
+            <span class="topic-label">{t.label}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. How we research -->
+  <section class="section white">
+    <div class="wrap research-grid">
+      <div class="research-media">
+        <img src="/images/research-desk.webp" alt="Research desk with psychology books and notes" width="1168" height="784" loading="lazy" decoding="async" />
+      </div>
+      <div class="research-copy">
+        <span class="kicker">How we research</span>
+        <h2>Written and reviewed with academic care</h2>
+        <p>Every guide on this site is built on textbooks, peer-reviewed literature, and official sources, then reviewed for accuracy before publication.</p>
+        <ul class="check-list">
+          <li><span class="check"><Fragment set:html={checkSvg} /></span><span><strong>Evidence-reviewed.</strong> Each article is checked against reliable sources before it goes live.</span></li>
+          <li><span class="check"><Fragment set:html={checkSvg} /></span><span><strong>Sourced facts.</strong> Figures come from named sources. Nothing is invented.</span></li>
+          <li><span class="check"><Fragment set:html={checkSvg} /></span><span><strong>Educational only.</strong> This site never offers diagnosis or treatment advice.</span></li>
+          <li><span class="check"><Fragment set:html={checkSvg} /></span><span><strong>Corrections welcome.</strong> Errors are fixed openly under a public corrections policy.</span></li>
+        </ul>
+        <a class="btn btn-outline" href="/editorial-standards/">Read our editorial standards <Fragment set:html={arrow} /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Latest articles -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Latest guides</span>
+        <h2>Start learning today</h2>
+        <p>The newest in-depth guides from the publication.</p>
+      </div>
+      <div class="card-grid">
+        {latest.map((a) => (
+          <a class="card" href={a.href}>
+            <img src={a.image} alt={a.imageAlt} width="1168" height="784" loading="lazy" decoding="async" />
+            <div class="card-body">
+              <span class="card-kicker">{a.kicker}</span>
+              <h3>{a.title}</h3>
+              <p>{a.description}</p>
+              <span class="card-link">Read the guide <Fragment set:html={arrow} /></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="section white">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Good to know</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-list">
+          {faqs.slice(0, 3).map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <div class="faq-answer"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+        <div class="faq-list">
+          {faqs.slice(3).map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <div class="faq-answer"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CTA band -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cta-bg" src="/images/cta-background.webp" alt="" width="1168" height="784" loading="lazy" decoding="async" aria-hidden="true" />
+        <div class="cta-inner">
+          <span class="kicker">Begin here</span>
+          <h2>Start learning behavioral psychology today</h2>
+          <p>From the definition and core principles to degrees and careers, everything is organized for self-paced learning.</p>
+          <div class="cta-btns">
+            <a class="btn btn-purple" href="/what-is-behavioral-psychology/">Read the foundations <Fragment set:html={arrow} /></a>
+            <a class="btn btn-outline" href="/blog/">Browse all articles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

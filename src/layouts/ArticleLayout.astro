@@ -1,0 +1,277 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string; // ISO date, e.g. "2026-11-03"
+  heroImage: string;
+  heroAlt: string;
+  heroWidth?: number;
+  heroHeight?: number;
+  deck?: string;
+  figcaption?: string;
+  toc?: { id: string; label: string }[];
+  takeaways?: string[];
+  disclaimer?: string;
+  faqs?: { q: string; a: string }[];
+  sources?: { label: string; href: string }[];
+  crumbs?: { label: string; href?: string }[];
+  related?: { title: string; href: string; description: string }[];
+}
+
+const {
+  title, description, date,
+  heroImage, heroAlt, heroWidth = 1168, heroHeight = 784,
+  deck = "", figcaption = "", toc = [],
+  takeaways = [], disclaimer = "",
+  faqs = [], sources = [],
+  crumbs = [], related = [],
+} = Astro.props;
+
+const site = 'https://behavioralpsychology.pro';
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const prettyDate = new Date(date + 'T00:00:00').toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+const authorPortrait = '/images/author-hassam-shabbir.webp';
+
+const crumbItems = [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": site + "/" },
+  ...crumbs.map((c, i) => ({
+    "@type": "ListItem",
+    "position": i + 2,
+    "name": c.label,
+    ...(c.href ? { "item": new URL(c.href, site).href } : { "item": pageUrl }),
+  })),
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": pageUrl + "#article",
+      "headline": title,
+      "description": description,
+      "image": new URL(heroImage, site).href,
+      "datePublished": date,
+      "dateModified": date,
+      "author": { "@type": "Person", "name": "Hassam Shabbir", "url": site + "/author/hassam-shabbir/" },
+      "publisher": { "@type": "Organization", "name": "Behavioral Psychology", "url": site + "/" },
+      "mainEntityOfPage": { "@id": pageUrl + "#webpage" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": crumbItems,
+    },
+    ...(faqs.length > 0 ? [{
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }] : [])
+  ]
+};
+---
+<BaseLayout title={title} description={description} ogImage={heroImage} ogType="article" articleDate={date} jsonLd={jsonLd}>
+  <style>
+    .article { padding: 56px 0 84px; background: #fff; }
+    .article .crumbs { max-width: 860px; margin: 0 auto 20px; }
+    .article h1 {
+      font-size: 42px; line-height: 1.16; letter-spacing: -0.7px;
+      color: var(--navy); font-weight: 800; margin: 0 auto 14px; max-width: 860px;
+    }
+    .article-deck {
+      font-size: 19px; line-height: 1.6; color: var(--muted);
+      margin: 0 auto 28px; max-width: 860px;
+    }
+    .article-byline {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 18px 28px; margin: 0 auto 36px; max-width: 860px;
+      padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .article-author { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
+    .article-author img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; }
+    .article-author span { display: flex; flex-direction: column; gap: 1px; }
+    .article-author small { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted); }
+    .article-author strong { font-size: 16.5px; color: var(--navy); font-weight: 800; }
+    .article-author b { font-size: 13.5px; font-weight: 500; color: var(--muted); }
+    .article-author:hover strong { color: var(--purple-deep); }
+    .article-dates { display: flex; gap: 24px; margin: 0; padding: 0; }
+    .article-dates div { display: flex; flex-direction: column; gap: 2px; }
+    .article-dates dt { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted); text-transform: uppercase; }
+    .article-dates dd { margin: 0; font-size: 14.5px; color: var(--ink); }
+    .article-process {
+      margin-left: auto; font-size: 14.5px; font-weight: 700;
+      color: var(--purple-deep); text-decoration: none; white-space: nowrap;
+    }
+    .article-process:hover { text-decoration: underline; }
+    .article-hero { margin: 0 auto 44px; max-width: 1020px; }
+    .article-hero img {
+      width: 100%; height: auto; aspect-ratio: 1168 / 784; object-fit: cover;
+      border-radius: 22px; display: block;
+    }
+    .article-hero figcaption { font-size: 13.5px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+    .article-layout { display: block; max-width: 1180px; margin: 0 auto; }
+    @media (min-width: 1020px) {
+      .article-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; align-items: start; }
+      .article-toc { position: sticky; top: 98px; margin: 0; }
+    }
+    .article-toc {
+      background: var(--bg); border: 1px solid var(--line);
+      border-radius: 16px; padding: 22px 24px; margin: 0 0 36px; font-size: 14.5px;
+    }
+    .article-toc p { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; color: var(--navy); margin: 0 0 12px; }
+    .article-toc ol { margin: 0; padding-left: 20px; line-height: 1.5; }
+    .article-toc li { margin-bottom: 8px; }
+    .article-toc li:last-child { margin-bottom: 0; }
+    .article-toc a { color: var(--ink); text-decoration: none; }
+    .article-toc a:hover { color: var(--purple-deep); text-decoration: underline; }
+    .article-prose { max-width: 760px; }
+    .article-prose p { line-height: 1.85; margin: 0 0 20px; color: var(--ink); font-size: 17px; }
+    .article-prose h2 {
+      font-size: 27px; color: var(--navy); font-weight: 800;
+      margin: 44px 0 14px; letter-spacing: -0.3px; scroll-margin-top: 100px;
+    }
+    .article-prose h3 { font-size: 20px; color: var(--navy); font-weight: 800; margin: 30px 0 10px; scroll-margin-top: 100px; }
+    .article-prose ul, .article-prose ol { margin: 0 0 20px; padding-left: 24px; line-height: 1.8; font-size: 16.5px; color: var(--ink); }
+    .article-prose li { margin-bottom: 8px; }
+    .article-prose a { color: var(--purple-deep); }
+    .article-prose .disclaimer-box, .article-prose .takeaways { max-width: 760px; }
+    .article-faq { max-width: 760px; margin-top: 52px; }
+    .article-faq h2 { font-size: 27px; color: var(--navy); font-weight: 800; margin: 0 0 20px; letter-spacing: -0.3px; }
+    .sources-box {
+      background: var(--bg); border: 1px solid var(--line);
+      border-radius: 16px; padding: 26px 30px; margin-top: 52px; max-width: 760px;
+    }
+    .sources-box h2 { font-size: 20px; margin: 0 0 12px; color: var(--navy); font-weight: 800; }
+    .sources-box ul { margin: 0; padding-left: 20px; }
+    .sources-box li { margin-bottom: 8px; font-size: 15px; }
+    .article-author-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      background: var(--bg); border: 1px solid var(--line);
+      border-radius: 18px; padding: 30px; margin-top: 48px; max-width: 760px;
+    }
+    .article-author-card img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; flex: none; }
+    .article-author-card p:first-child { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; color: var(--muted); margin: 0 0 8px; }
+    .article-author-card h2 { font-size: 22px; color: var(--navy); font-weight: 800; margin: 0 0 8px; }
+    .article-author-card p:nth-of-type(2) { font-size: 15.5px; line-height: 1.7; color: var(--ink); margin: 0 0 12px; }
+    .article-author-card a { font-size: 15px; font-weight: 700; color: var(--purple-deep); text-decoration: none; }
+    .article-author-card a:hover { text-decoration: underline; }
+    .article-next {
+      background: var(--navy); color: #fff;
+      border-radius: 18px; padding: 42px 38px; margin-top: 48px; max-width: 760px;
+    }
+    .article-next p { font-size: 12px; font-weight: 800; letter-spacing: 1.6px; color: rgba(255,255,255,.72); margin: 0 0 12px; }
+    .article-next h2 { font-size: 28px; font-weight: 800; margin: 0 0 24px; letter-spacing: -0.3px; color: #fff; }
+    .article-next div { display: flex; flex-wrap: wrap; gap: 14px; }
+    @media (max-width: 1020px) {
+      .article { padding: 40px 0 64px; }
+      .article h1 { font-size: 31px; }
+      .article-deck { font-size: 17px; }
+      .article-prose p { font-size: 16px; }
+    }
+    @media (max-width: 640px) {
+      .article-author-card { flex-direction: column; }
+      .article-next { padding: 30px 24px; }
+    }
+  </style>
+
+  <article class="article">
+    <div class="wrap">
+      <p class="crumbs">
+        <a href="/">Home</a>
+        {crumbs.map((c) => (<Fragment> &rsaquo; {c.href ? <a href={c.href}>{c.label}</a> : <span>{c.label}</span>}</Fragment>))}
+      </p>
+      <h1>{title}</h1>
+      {deck && <p class="article-deck">{deck}</p>}
+      <div class="article-byline">
+        <a class="article-author" href="/author/hassam-shabbir/">
+          <img src={authorPortrait} width="160" height="160" alt="Portrait of Hassam Shabbir" fetchpriority="high" />
+          <span>
+            <small>WRITTEN BY</small>
+            <strong>Hassam Shabbir</strong>
+            <b>Psychologist, Writer and Author</b>
+          </span>
+        </a>
+        <dl class="article-dates">
+          <div><dt>Published</dt><dd>{prettyDate}</dd></div>
+          <div><dt>Evidence reviewed</dt><dd>{prettyDate}</dd></div>
+        </dl>
+        <a class="article-process" href="/editorial-standards/">How we research <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="wrap">
+      <figure class="article-hero">
+        <img src={heroImage} alt={heroAlt} width={heroWidth} height={heroHeight} fetchpriority="high" />
+        {figcaption && <figcaption>{figcaption}</figcaption>}
+      </figure>
+    </div>
+    <div class="wrap">
+      <div class="article-layout">
+        {toc.length > 0 && (
+          <aside class="article-toc" aria-label="On this page">
+            <p>ON THIS PAGE</p>
+            <ol>
+              {toc.map((t) => (<li><a href={"#" + t.id}>{t.label}</a></li>))}
+            </ol>
+          </aside>
+        )}
+        <div class="article-body">
+          {disclaimer && <div class="disclaimer-box">{disclaimer}</div>}
+          {takeaways.length > 0 && (
+            <aside class="takeaways" aria-label="Key takeaways">
+              <h2>Key takeaways</h2>
+              <ul>{takeaways.map((t) => (<li>{t}</li>))}</ul>
+            </aside>
+          )}
+          <div class="article-prose">
+            <slot />
+          </div>
+          {faqs.length > 0 && (
+            <section class="article-faq" aria-label="Frequently asked questions">
+              <h2>Frequently asked questions</h2>
+              <div class="faq-list single">
+                {faqs.map((f) => (
+                  <details>
+                    <summary>{f.q}</summary>
+                    <div class="faq-answer"><p>{f.a}</p></div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+          {sources.length > 0 && (
+            <aside class="sources-box" aria-label="Sources">
+              <h2>Sources</h2>
+              <ul>
+                {sources.map((s) => (<li><a href={s.href} target="_blank" rel="noopener">{s.label}</a></li>))}
+              </ul>
+            </aside>
+          )}
+          <aside class="article-author-card" aria-label="About the author">
+            <img src={authorPortrait} width="160" height="160" alt="Portrait of Hassam Shabbir" loading="lazy" decoding="async" />
+            <div>
+              <p>ABOUT THE AUTHOR</p>
+              <h2>Hassam Shabbir</h2>
+              <p>Hassam Shabbir is a psychologist, writer and author. His background and editorial standards are on his author profile.</p>
+              <a href="/author/hassam-shabbir/">Review author background <span aria-hidden="true">→</span></a>
+            </div>
+          </aside>
+          {related.length > 0 && (
+            <aside class="article-next" aria-label="Continue learning">
+              <p>CONTINUE LEARNING</p>
+              <h2>Keep exploring behavioral psychology</h2>
+              <div>
+                {related.map((r) => (<a class="btn btn-purple" href={r.href}>{r.title} <span aria-hidden="true">→</span></a>))}
+              </div>
+            </aside>
+          )}
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

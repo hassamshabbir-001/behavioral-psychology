@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://behavioralpsychology.pro/sitemap-index.xml
+
+# llms.txt: plain-language site summary for AI assistants
+# https://behavioralpsychology.pro/llms.txt
+# alms.txt: alternate summary format
+# https://behavioralpsychology.pro/alms.txt

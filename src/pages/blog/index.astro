@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articles } from '../../data/articles';
+
+const title = "Articles on Behavioral Psychology";
+const description = "Browse all articles on behavioral psychology: foundations, degree guides, careers, and everyday applications, written in plain language.";
+const ogImage = "/images/hero-behavioral-psychology.webp";
+const site = 'https://behavioralpsychology.pro';
+const pageUrl = site + '/blog/';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": pageUrl + "#webpage",
+      "url": pageUrl,
+      "name": title,
+      "description": description,
+      "author": { "@type": "Person", "name": "Hassam Shabbir", "url": site + "/author/hassam-shabbir/" },
+      "publisher": { "@type": "Organization", "name": "Behavioral Psychology", "url": site + "/" },
+      "isPartOf": { "@id": site + "/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": site + "/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": pageUrl }
+      ]
+    }
+  ]
+};
+---
+<BaseLayout title={title} description={description} ogImage={ogImage} jsonLd={jsonLd}>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">&rsaquo;</span> Articles</p>
+      <h1>Articles</h1>
+      <p>Everything on this site in one place: the foundations of behavioral psychology, degree and career guides, and clear examples from everyday life. Start with the basics or jump to the guide you need.</p>
+    </div>
+  </section>
+  <section class="page-body">
+    <div class="wrap">
+      <div class="card-grid">
+        {articles.map((a) => (
+          <a class="card" href={a.href}>
+            <img src={a.image} alt={a.imageAlt} width="1168" height="784" loading="lazy" />
+            <div class="card-body">
+              <span class="card-kicker">{a.kicker}</span>
+              <h3>{a.title}</h3>
+              <p>{a.description}</p>
+              <span class="card-link">Read the article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
