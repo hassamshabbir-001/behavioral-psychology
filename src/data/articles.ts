@@ -14,7 +14,7 @@ export const articles: Article[] = [
     slug: "what-is-behavioral-psychology",
     title: "What Is Behavioral Psychology? Definition and Basics",
     description: "Behavioral psychology studies how environment shapes behavior. Learn its definition, key principles, history, and real-world applications.",
-    date: "2026-11-03",
+    date: "2026-10-26",
     image: "/images/hero-what-is-behavioral-psychology.webp",
     imageAlt: "Abstract illustration of a human head with behavioral symbols",
     href: "/what-is-behavioral-psychology/",
