@@ -34,35 +34,100 @@ const jsonLd = {
   <section class="page-body">
     <div class="wrap">
       <div class="prose">
-        <h2>What This Site Is</h2>
-        <p>Behavioral Psychology is an independent educational publication. It exists for one reason: to make behavioral science understandable. The field is full of powerful ideas about how people learn, why habits form, and what drives behavior, but much of the writing around it is either too technical for a general reader or too simplified to be useful. This site aims for the middle ground: clear, readable articles grounded in real research.</p>
-        <p>Every article on this site is written for education. Nothing here is clinical advice, a diagnosis, or a treatment recommendation. You can read more about that in our <a href="/disclaimer/">disclaimer</a>.</p>
+        <p class="kicker">Why this site exists</p>
+        <h2>An important field with too little clear guidance</h2>
+        <p>Behavioral psychology shapes far more of daily life than most people realize. The principles behind reinforcement, habit formation, and behavior change sit behind classrooms, workplaces, health programs, and public policy. Yet public writing about the field tends to fall into two traps: academic papers that only specialists can read, or pop-psychology takes that oversimplify the science until it is misleading.</p>
+        <p>I want a reader to leave with a more precise question, not simply a new label. A student comparing degrees needs to know which qualification supports the work they want to do. Someone reading about reinforcement needs to know how it actually works in a classroom or a workplace, and where its limits begin.</p>
+        <p>That is why this publication connects every explanation with the sources behind it. The <a href="/degrees/">degree guides</a> help you compare study routes; the <a href="/behavioral-psychology-examples/">everyday examples</a> show how behavioral principles operate outside the lab. Neither makes your decision for you.</p>
 
-        <h2>What We Cover</h2>
-        <p>The publication covers the full range of behavioral psychology, from theory to practice:</p>
-        <ul>
-          <li><strong>Foundations:</strong> the core ideas of the field, including classical and operant conditioning, reinforcement, and the behavioral perspective in psychology.</li>
-          <li><strong>Degrees:</strong> guides to undergraduate, master's, and doctoral programs in behavioral psychology, including online options.</li>
-          <li><strong>Careers:</strong> honest, sourced overviews of what behavioral psychology graduates can do, from applied behavior analysis to research, consulting, and industry roles.</li>
-          <li><strong>Applications:</strong> how behavioral principles show up in everyday life, education, workplaces, health, and public policy.</li>
-        </ul>
+        <div class="about-author">
+          <img class="about-author-portrait" src="/images/author-hassam-shabbir.webp" width="400" height="400" alt="Portrait of Hassam Shabbir" loading="lazy" />
+          <div class="about-author-info">
+            <p class="about-author-role">Psychologist, writer and author</p>
+            <h2 class="about-author-name">Hassam Shabbir</h2>
+            <p>Hassam Shabbir is the author and evidence reviewer responsible for this publication.</p>
+            <a href="/author/hassam-shabbir/">View full author profile</a>
+          </div>
+        </div>
 
-        <h2>Who It Is For</h2>
-        <p>This site is written for students deciding whether behavioral psychology is the right field for them, for career changers exploring a second act in the behavioral sciences, and for curious readers who want to understand why people do what they do. No background in psychology is required. When a term of art appears, it is defined in plain language the first time it is used.</p>
+        <p class="kicker">How an article is made</p>
+        <h2>The final draft comes after the difficult questions</h2>
+        <p>Good editorial work is not one pass through a search engine. It is a sequence of reading, checking, challenging, rewriting, and knowing when another expert needs to enter the process.</p>
+        <ol class="process-steps">
+          <li><strong>Begin with the reader's real question.</strong> Every article starts by defining what the reader needs to understand, which claims require evidence, and which details could change the answer.</li>
+          <li><strong>Build from reliable sources.</strong> Peer-reviewed research, government data, and professional standards take priority over summaries and unsupported opinion.</li>
+          <li><strong>Check limits and context.</strong> Who a finding studied, what it cannot prove, and where it does not apply.</li>
+          <li><strong>Edit for accuracy and understanding.</strong> Names, source dates, and important qualifications get checked alongside readability.</li>
+          <li><strong>Correct openly.</strong> Published work is reviewed on a rolling basis, and errors are fixed when I find them or a reader reports one.</li>
+        </ol>
+        <p>The full process is documented in our <a href="/editorial-standards/">editorial standards</a>.</p>
 
-        <h2>How We Work</h2>
-        <p>Every article is researched from reputable sources, reviewed by a human before publication, and written in the author's own words. Figures such as salaries and job growth come from named sources, typically the U.S. Bureau of Labor Statistics or published professional surveys. Opinions and analysis are always separated from reported facts. The full process is documented on our <a href="/editorial-standards/">editorial standards</a> page, and corrections are made openly when errors are found.</p>
-
-        <h2>The Author</h2>
-        <p>Behavioral Psychology is written by <a href="/author/hassam-shabbir/">Hassam Shabbir</a>, a psychologist, writer, and author. He holds a B.S. in Psychology from the University of Sargodha, has trained more than 400 professionals, and founded the nonprofit Rise Above Minds. The site's content is strictly educational.</p>
+        <p class="kicker">What readers can expect</p>
+        <h2>Clear guidance without false certainty</h2>
+        <p>Figures such as salaries and job growth come from named sources, typically the U.S. Bureau of Labor Statistics or published professional surveys, so readers can check them. Opinions and analysis are always separated from reported facts. When a term of art appears, it is defined in plain language the first time it is used, and no background in psychology is required.</p>
+        <p>This site is written for students deciding whether behavioral psychology is the right field for them, for career changers exploring a second act in the behavioral sciences, and for curious readers who want to understand why people do what they do.</p>
 
         <div class="disclaimer-box">
           <strong>Not a clinic.</strong> This site does not provide medical or psychological advice, diagnosis, or treatment. If you are looking for help with a mental health concern, please consult a qualified professional. See our <a href="/disclaimer/">disclaimer</a> for emergency resources.
         </div>
 
         <h2>Contact</h2>
-        <p>Questions, corrections, or feedback are welcome. You can reach the team through the <a href="/contact/">contact page</a>.</p>
+        <p>If you find an error, an outdated source, or a statement that needs more context, tell me through the <a href="/contact/">contact page</a>. Corrections are part of responsible publishing.</p>
       </div>
     </div>
   </section>
+
+  <style>
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin: 0 0 10px;
+    }
+    .prose .kicker + h2 { margin-top: 0; }
+    .process-steps { padding-left: 24px; }
+    .process-steps li { margin-bottom: 12px; line-height: 1.7; }
+    .about-author {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 36px 0;
+      padding: 28px;
+      border: 1px solid var(--purple-line);
+      border-radius: 18px;
+      background: var(--purple-soft);
+    }
+    .about-author-portrait {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .about-author-role {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin: 0 0 6px;
+    }
+    .about-author-name {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
+    .about-author-info p {
+      margin: 0 0 10px;
+      line-height: 1.7;
+    }
+    @media (max-width: 560px) {
+      .about-author {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </BaseLayout>
