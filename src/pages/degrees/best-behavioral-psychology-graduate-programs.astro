@@ -1,0 +1,147 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const props = {
+  title: "Best Behavioral Psychology Graduate Programs: How to Choose",
+  description: "Best behavioral psychology graduate programs compared honestly: accreditation, BCBA pathways, costs, and how to choose. Verified programs only.",
+  date: "2026-11-12",
+  heroImage: "/images/hero-best-behavioral-psychology-graduate-programs.webp",
+  heroAlt: "Graduate students walking on a university campus",
+  heroWidth: 1168,
+  heroHeight: 784,
+  deck: "Most best-program lists repeat the same school names with no method behind them. I checked the programs myself, against accreditation and the 2026 BCBA rules, so you can choose on evidence.",
+  figcaption: "Graduate students on a university campus. Program quality is decided by accreditation, funding, and faculty, not by rankings.",
+  toc: [
+    { id: "why-lists-fail", label: "Why most best lists are not useful" },
+    { id: "what-best-means", label: "What best actually means: six checks" },
+    { id: "the-2026-change", label: "The 2026 change that matters most" },
+    { id: "masters-checked", label: "Master's programs I checked" },
+    { id: "doctoral-checked", label: "Doctoral programs I checked" },
+    { id: "masters-or-doctorate", label: "Master's or doctorate: which level fits your goal?" },
+    { id: "online", label: "Online programs and what to verify" },
+    { id: "cost-funding", label: "Cost and funding" },
+    { id: "how-to-choose", label: "How to choose in five steps" },
+  ],
+  takeaways: [
+    "There is no single best behavioral psychology graduate program. The right program depends on whether you want BCBA certification, a research career, or a general psychology master's.",
+    "Published best lists repeat the same five or six school names with no methodology. Judge programs on accreditation, BCBA pathway status, thesis versus applied training, funding, and faculty fit instead.",
+    "The ABAI Verified Course Sequence ended December 31, 2025. BCBA eligibility now runs through Pathway 1, an accredited degree, or Pathway 2, faculty-attested coursework, and Pathway 2 closes on January 1, 2032.",
+    "Programs I verified: Simmons University MS in Behavior Analysis and the University of Kansas MA in Applied Behavioral Science at the master's level, and Endicott College and Capella University PhDs in behavior analysis at the doctoral level.",
+    "Ask every program what fraction of its students receive funding, and verify BCBA pathway status with the school and the BACB before you apply.",
+  ],
+  faqs: [
+    {
+      q: "What is the best behavioral psychology graduate program?",
+      a: "There is no single best program. The right choice depends on your goal. If you want BCBA certification, the best program is an ABAI-accredited one that qualifies under BACB Pathway 1, such as the Simmons University MS in Behavior Analysis or the University of Kansas MA in Applied Behavioral Science. If you want a research career or a university faculty role, a research doctorate with strong faculty in your area matters more than any ranking. If you want a general psychology master's, compare curriculum, thesis options, and cost. Published best lists repeat the same school names with no methodology, so treat them as a starting point, not a verdict."
+    },
+    {
+      q: "Do I need a master's or a PhD to become a BCBA?",
+      a: "A master's degree is the degree-level requirement for BCBA certification. You also need qualifying behavior-analytic coursework, 1,500 to 2,000 hours of supervised fieldwork, and a passing score on the BCBA exam. A PhD is not required for the BCBA, though doctoral programs exist for BCBAs who want research, teaching, or leadership roles. What matters is not the degree level but whether your program satisfies BACB Pathway 1 or Pathway 2."
+    },
+    {
+      q: "Can a general psychology master's lead to BCBA certification?",
+      a: "It can, through BACB Pathway 2, if you complete the required graduate-level behavior-analytic coursework and a designated faculty member at your university attests to it. The degree itself does not have to be in behavior analysis. Check before enrolling whether the program has a Pathway 2 Program Contact, a full-time BCBA faculty member who can attest your coursework, because without that attestation the general master's alone does not qualify you. Pathway 2 closes on January 1, 2032, after which only Pathway 1 accredited degrees qualify."
+    },
+    {
+      q: "Are online behavioral psychology graduate programs respected?",
+      a: "Respect follows accreditation and outcomes, not format. The Simmons University online MS in Behavior Analysis is accredited by the ABAI Accreditation Board through 2030 and qualifies under BACB Pathway 1, the same as its on-campus program, and its 2024 first-attempt BCBA pass rate was 78 percent against a 54 percent national average. Fully online research PhDs are rare in general psychology, though online doctorates exist in applied behavior analysis. Verify each program's accreditation, BCBA pathway status, and practicum arrangements before enrolling."
+    },
+    {
+      q: "How long does a master's in behavioral psychology take?",
+      a: "Most full-time master's programs take two years. The Simmons online MS in Behavior Analysis is designed for 20 months, and the University of Kansas MA in Applied Behavioral Science typically takes two to three years including a thesis. Part-time students usually finish in three years. Doctoral programs take longer: the Endicott PhD in Applied Behavior Analysis can be completed in as little as three years, while the Capella PhD in Behavior Analysis typically takes four to seven years."
+    },
+  ],
+  sources: [
+    { label: "Association for Behavior Analysis International, Accreditation and Recognition Directory", href: "https://www.abainternational.org/accreditation" },
+    { label: "Applied Behavior Analysis Edu, ABAI VCS Sunset: BCBA Pathways After the VCS Ended (checked November 2026)", href: "https://www.appliedbehavioranalysisedu.org/2026/03/abai-vcs-sunset-bcba-pathways/" },
+    { label: "Applied Behavior Analysis Edu, BCBA Certification Requirements and Steps (checked November 2026)", href: "https://www.appliedbehavioranalysisedu.org/bcba-certification/" },
+    { label: "Simmons University, Behavior Analysis Online (checked November 2026)", href: "https://www.simmons.edu/academics/programs/behavior-analysis-online" },
+    { label: "University of Kansas, MA in Applied Behavioral Science Curriculum (checked November 2026)", href: "https://absc.ku.edu/ma-req" },
+    { label: "Counseling Psychology.org, Best Online Applied Behavior Analysis Doctoral Programs (checked November 2026)", href: "https://www.counselingpsychology.org/psychology/degrees/applied-behavior-analysis/doctorate/" },
+    { label: "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook (checked November 2026)", href: "https://www.bls.gov/ooh/" },
+    { label: "ZipRecruiter, Behavioral Psychologist Salary (checked November 2026)", href: "https://www.ziprecruiter.com/Salaries/Behavioral-Psychologist-Salary" },
+  ],
+  crumbs: [
+    { label: "Degrees", href: "/degrees/" },
+    { label: "Best Graduate Programs" },
+  ],
+  related: [
+    { title: "MS in Behavioral Psychology", href: "/degrees/ms-behavioral-psychology/", description: "Deep dive on the research-focused MS track." },
+    { title: "Master's Programs Guide", href: "/degrees/masters-in-behavioral-psychology/", description: "Program types, costs, and career paths." },
+    { title: "PhD Programs and Careers", href: "/degrees/phd-in-behavioral-psychology/", description: "Research-focused doctoral training explained." },
+  ],
+};
+---
+
+<ArticleLayout {...props}>
+  <h2 id="why-lists-fail">Why most best lists are not useful</h2>
+  <p>I have read the published lists of the best behavioral psychology graduate programs, and I will be honest with you: most of them are the same five or six school names, copied from one list to the next, with no method behind them. One widely shared list names USC, Duke, Columbia, Pepperdine, and UC Berkeley. Another names Harvard, Berkeley, Columbia, Michigan, and USC. The overlap is the tell. These lists do not explain how programs were compared, whether anyone checked accreditation, or what a graduate of each program can actually do afterward.</p>
+  <p>The older lists are worse. One top-ten PhD list still circulating is about three years old, and another ranked master's list is roughly sixteen months old. Graduate programs change faster than that: accreditation status changes, course sequences change, and as this guide explains below, the entire BCBA eligibility system changed on January 1, 2026. A list that predates that change cannot tell you whether a program still qualifies its graduates for certification.</p>
+  <p>The one genuinely strong competitor I found is not a general best list at all. It is a directory of ABA graduate programs built on the BACB's current framework, verified program by program against ABAI records. That is the standard this guide holds itself to: every program below was checked against its own published page or an accreditation record, and every claim names its source. I do not rank programs, because a ranking would pretend programs with different purposes serve the same goal. Instead, this guide shows you how to judge a program and which verified programs deserve a close look.</p>
+
+  <h2 id="what-best-means">What best actually means: six checks</h2>
+  <p>Before any school name matters, run these six checks. They separate strong programs from well-marketed ones, and they take an afternoon of reading program pages.</p>
+  <ul>
+    <li><strong>BCBA pathway status.</strong> If certification is your goal, the program must qualify you under BACB Pathway 1 or Pathway 2. Pathway 1 means the degree comes from an ABAI-accredited or ABAI-recognized program, or an APBA-accredited one. Pathway 2 means a designated BCBA faculty member attests your coursework. Ask the program which pathway it satisfies, in writing.</li>
+    <li><strong>Accreditation.</strong> Regional institutional accreditation is the baseline for financial aid and employer recognition. For behavior analysis, ABAI accreditation is the stronger signal: it means the program passed a peer review of its curriculum, faculty, and outcomes, not just a paperwork check.</li>
+    <li><strong>Thesis versus applied training.</strong> Thesis tracks prepare you for doctoral study and research careers. Applied tracks trade the thesis for supervised fieldwork and feed directly into jobs. Neither is better in the abstract. The right one follows the job you want.</li>
+    <li><strong>Funding.</strong> Ask what fraction of students receive assistantships and for how many years. A funded offer with a strong mentor beats an unfunded offer from a bigger name in almost every case that matters to your career.</li>
+    <li><strong>Faculty fit.</strong> Read faculty research pages. A program is only as strong as the professors whose work matches your interests, especially at the doctoral level, where one mentor shapes your entire training.</li>
+    <li><strong>Format and fieldwork.</strong> Online coursework is common, but practicum hours, residencies, and dissertation fieldwork still need in-person components. Ask how the program arranges placements near where you live.</li>
+  </ul>
+  <p>Our <a href="/degrees/masters-in-behavioral-psychology/">master's programs guide</a> explains program types in more depth, and our <a href="/degrees/phd-in-behavioral-psychology/">PhD guide</a> covers doctoral training, funding, and the academic versus applied split.</p>
+
+  <h2 id="the-2026-change">The 2026 change that matters most</h2>
+  <p>If you remember one fact from this guide, make it this one. The ABAI Verified Course Sequence system, the credential most programs used to market themselves for years, ended on December 31, 2025. From January 1, 2026, BCBA certification eligibility runs through two pathways, and any program page still advertising a Verified Course Sequence as its proof is out of date.</p>
+  <p><strong>Pathway 1</strong> is the accredited-degree route: you earn a degree from an ABAI-accredited, ABAI-recognized, or APBA-accredited program, and accreditation itself verifies your coursework. No separate attestation is needed. One current directory lists 76 qualifying Pathway 1 programs in the United States, verified against ABAI records in August 2026.</p>
+  <p><strong>Pathway 2</strong> is the coursework-attestation route: you earn a qualifying master's degree and complete the required behavior-analytic coursework, currently 315 instructional hours under the 2026 requirements, and a designated full-time BCBA faculty member at your university, the Pathway 2 Program Contact, attests to the BACB that you met the content requirements. Pathway 2 remains valid through December 31, 2031. From January 1, 2032, Pathway 1 becomes the only eligibility route.</p>
+  <p>Both routes also require 1,500 to 2,000 hours of supervised fieldwork and a passing score on the BCBA exam. Two older routes, Pathways 3 and 4, are discontinued on January 1, 2027. My advice is plain: if you are choosing a program now, prefer Pathway 1. It is the only route that survives past 2032, and it removes the attestation risk entirely. If you choose a Pathway 2 program, confirm in writing that it has an active Pathway 2 Program Contact before you enroll.</p>
+
+  <h2 id="masters-checked">Master's programs I checked</h2>
+  <p>Two master's programs earned a close look because their claims check out against their own published pages and accreditation records. Both are behavior-analysis programs, which is where the verifiable quality signals are strongest.</p>
+  <div class="table-wrap"><table class="data-table"><thead><tr><th>Program</th><th>Degree and format</th><th>What I verified</th></tr></thead><tbody>
+  <tr><th scope="row">Simmons University, Boston</th><td>MS in Behavior Analysis, on campus and online</td><td>ABAI-accredited, both formats, through 2030. Qualifies under BACB Pathway 1. Online program: 40 credits over 20 months, thesis required. 2024 first-attempt BCBA pass rate 78 percent, against a 54 percent national average, per the BACB 2024 report cited on the program page. First master's in New England to earn ABAI accreditation.</td></tr>
+  <tr><th scope="row">University of Kansas, Lawrence</th><td>MA in Applied Behavioral Science, on campus and online</td><td>ABAI-accredited master's program. Minimum 30 credit hours including a thesis, typically two to three years. Department aims to fund incoming graduate students through graduate teaching assistantships.</td></tr>
+  </tbody></table></div>
+  <p class="table-note">Verify current accreditation, costs, and admission details with each school before applying. Programs change year to year.</p>
+  <p>What about a general behavioral psychology master's, the MA or MS in Psychology with a behavioral emphasis that the published lists name? Those programs exist at research universities, and the lists repeat the same names: USC, Duke, Columbia, Pepperdine, UC Berkeley, Harvard, Michigan. I did not verify those programs individually, and I will not present them as checked. If you pursue this route, apply the six checks above: does the curriculum cover conditioning, learning theory, and research methods; does it include a thesis or an applied project; does it prepare you for BCBA coursework under Pathway 2 or for a PhD? A general master's is the right choice when your goal is research, industry, or doctoral preparation rather than BCBA certification. Our <a href="/degrees/ms-behavioral-psychology/">MS guide</a> walks through the research-focused track in full.</p>
+
+  <h2 id="doctoral-checked">Doctoral programs I checked</h2>
+  <p>At the doctoral level, the verifiable programs are all in applied behavior analysis, where online and hybrid formats are established and accreditation is checkable. Three earned a close look.</p>
+  <div class="table-wrap"><table class="data-table"><thead><tr><th>Program</th><th>Degree and format</th><th>What I verified</th></tr></thead><tbody>
+  <tr><th scope="row">Endicott College, Beverly MA</th><td>PhD in Applied Behavior Analysis, synchronous online</td><td>60 credits, completable in as little as three years, post-master's entry, no residency requirement. Research-based, preparing graduates for university teaching and scientist-practitioner roles. Program cost listed at $62,700 on the school's page.</td></tr>
+  <tr><th scope="row">Capella University</th><td>PhD in Behavior Analysis, 100 percent online</td><td>93 quarter credits, typically four to seven years. Requires a master's degree from an accredited institution and active BCBA certification. No GRE required. Regionally accredited by the Higher Learning Commission.</td></tr>
+  <tr><th scope="row">Simmons University, Boston</th><td>PhD in Behavior Analysis, fully online</td><td>Research-focused doctorate designed for practicing BCBAs who want doctoral-level training without relocating.</td></tr>
+  </tbody></table></div>
+  <p class="table-note">Doctoral admission is competitive and faculty-driven. Verify current requirements, costs, and start terms with each school.</p>
+  <p>Note the pattern: these doctorates serve working BCBAs and future faculty, not first-time graduate students. Endicott and Capella both require a master's degree first, and Capella requires active BCBA certification. If you do not yet hold a master's, the doctoral decision comes after it, and the master's table above is where your search starts.</p>
+
+  <h2 id="masters-or-doctorate">Master's or doctorate: which level fits your goal?</h2>
+  <p>The degree level decision is simpler than the school decision. Match the level to the job title, and the school choice follows.</p>
+  <div class="table-wrap"><table class="data-table"><thead><tr><th>Career goal</th><th>Master's sufficient?</th><th>Notes</th></tr></thead><tbody>
+  <tr><th scope="row">Board Certified Behavior Analyst (BCBA)</th><td>Yes, with conditions</td><td>Needs Pathway 1 or Pathway 2 coursework plus supervised fieldwork and the exam</td></tr>
+  <tr><th scope="row">Research coordinator, lab manager, data analyst</th><td>Yes</td><td>MS thesis track is ideal preparation</td></tr>
+  <tr><th scope="row">Industry, HR, and UX research roles</th><td>Often yes</td><td>Experience and portfolio matter as much as the degree</td></tr>
+  <tr><th scope="row">University professor</th><td>No</td><td>Doctorate expected for tenure-track roles</td></tr>
+  <tr><th scope="row">Licensed psychologist</th><td>No</td><td>Doctorate required in nearly all states</td></tr>
+  <tr><th scope="row">Senior research and leadership roles in behavior analysis</th><td>Sometimes</td><td>A doctorate helps, and several programs target practicing BCBAs</td></tr>
+  </tbody></table></div>
+  <p class="table-note">Licensing and hiring requirements vary by state and employer; verify before committing to a path.</p>
+  <p>On earnings, keep expectations grounded in published data. ZipRecruiter reported an average of $92,378 a year for a behavioral psychologist in November 2026, with most salaries between $60,000 and $116,500 and top earners at $148,500. The Bureau of Labor Statistics reported a median annual wage of $94,310 across all psychologist occupations in May 2024, with Psychologists, All Other at $117,580 and clinical and counseling psychologists at $95,830. Those figures describe the field broadly. Your pay follows your role, setting, and credentials, and BCBA certification and doctoral training move the range, they do not guarantee a number. Our <a href="/careers/">careers guide</a> breaks down roles and salary ranges in detail.</p>
+
+  <h2 id="online">Online programs and what to verify</h2>
+  <p>Online study is a real option at the master's level and a limited one at the doctoral level, and the difference matters. The Simmons online MS in Behavior Analysis is accredited by the ABAI Accreditation Board through 2030 and qualifies under BACB Pathway 1, exactly like its on-campus program. That is the standard an online program must meet: same accreditation, same pathway, same exam eligibility.</p>
+  <p>Fully online research PhDs are rare in general psychology, and many academics view hybrid programs more favorably. In applied behavior analysis the picture is different: Endicott and Capella both run online doctorates, and Simmons runs a fully online PhD for practicing BCBAs. Before enrolling in any online program, verify four things in writing: its regional accreditation, its BCBA pathway status, how practicum or residency hours are arranged near where you live, and whether your state recognizes the degree for any license you may want later. Our <a href="/degrees/online-behavioral-psychology-degree/">online degree programs guide</a> explains how to evaluate formats level by level.</p>
+
+  <h2 id="cost-funding">Cost and funding</h2>
+  <p>Costs vary more than any other factor in this decision, so think in ranges and plan around your own budget. For master's programs, total tuition commonly falls between $20,000 and $40,000 at public universities and $40,000 to $70,000 or more at private ones. Endicott lists its PhD program cost at $62,700. Doctoral funding works differently from master's funding: many PhD programs offer full tuition coverage plus a living stipend in exchange for teaching or research assistantships, and the University of Kansas department aims to fund incoming master's students through graduate teaching assistantships as well.</p>
+  <p>Funding at the master's level is thinner than at the doctoral level, but it exists. Graduate assistantships, employer tuition benefits, and federal student loans through the FAFSA are the usual routes. I recommend asking every program what fraction of its students receive assistantships: the answer tells you how seriously the school invests in its graduate cohort. Compare the all-in total, including fees, residency travel, and lost income if you reduce work hours, not just the headline tuition.</p>
+
+  <h2 id="how-to-choose">How to choose in five steps</h2>
+  <p><strong>Step one: name the job.</strong> Write down the exact role you want, BCBA, research coordinator, university professor, or licensed psychologist. Every later decision follows from that sentence.</p>
+  <p><strong>Step two: check the BCBA pathway.</strong> If certification is on your list, confirm the program qualifies under Pathway 1 or Pathway 2, in writing, and prefer Pathway 1 because it is the only route that survives past 2032.</p>
+  <p><strong>Step three: check accreditation.</strong> Regional institutional accreditation is the baseline. ABAI accreditation is the stronger signal for behavior analysis programs.</p>
+  <p><strong>Step four: compare funding.</strong> Ask what fraction of students receive assistantships and for how many years. A funded offer with a strong mentor beats an unfunded offer from a bigger name.</p>
+  <p><strong>Step five: contact faculty and current students.</strong> Read faculty research pages, then email one professor whose work matches your interests and ask one current student what the program is actually like. Those two conversations are worth more than any ranking list.</p>
+  <p>If you are still mapping the whole field, our <a href="/degrees/">degrees hub</a> puts every level side by side, from associate to PhD. In my experience, a deliberate choice now saves you years and thousands of dollars later.</p>
+</ArticleLayout>

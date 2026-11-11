@@ -11,6 +11,16 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "best-behavioral-psychology-graduate-programs",
+    title: "Best Behavioral Psychology Graduate Programs: How to Choose",
+    description: "Best behavioral psychology graduate programs compared honestly: accreditation, BCBA pathways, costs, and how to choose. Verified programs only.",
+    date: "2026-11-12",
+    image: "/images/hero-best-behavioral-psychology-graduate-programs.webp",
+    imageAlt: "Graduate students walking on a university campus",
+    href: "/degrees/best-behavioral-psychology-graduate-programs/",
+    kicker: "Degrees",
+  },
+  {
     slug: "what-is-behavioral-psychology",
     title: "What Is Behavioral Psychology? Definition and Basics",
     description: "Behavioral psychology studies how environment shapes behavior. Learn its definition, key principles, history, and real-world applications.",
