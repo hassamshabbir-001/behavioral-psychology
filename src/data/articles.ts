@@ -11,6 +11,16 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "applied-behavioral-psychology",
+    title: "Applied Behavioral Psychology: ABA, Careers & Certification",
+    description: "Applied behavioral psychology explained: what ABA is, the three branches, where it is used, and the RBT to BCBA career ladder with certification steps.",
+    date: "2026-11-14",
+    image: "/images/applied-behavioral-psychology.webp",
+    imageAlt: "A team in discussion around a table in a bright office with a purple wall",
+    href: "/applied-behavioral-psychology/",
+    kicker: "Foundations",
+  },
+  {
     slug: "best-behavioral-psychology-graduate-programs",
     title: "Best Behavioral Psychology Graduate Programs: How to Choose",
     description: "Best behavioral psychology graduate programs compared honestly: accreditation, BCBA pathways, costs, and how to choose. Verified programs only.",
